@@ -66,6 +66,13 @@ var someReactComponent = React.createClass({
 ```
 
 
+## Links
+
+- [Source Code](https://github.com/skratchdot/react-bootstrap-datetimepicker)
+- [Live Demo](http://projects.skratchdot.com/react-bootstrap-datetimepicker/)
+- [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
+
+
 ## License
 
 Copyright (c) 2014 skratchdot  

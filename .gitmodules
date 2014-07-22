@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = git@github.com:skratchdot/react-bootstrap-datetimepicker.git
+	branch = gh-pages

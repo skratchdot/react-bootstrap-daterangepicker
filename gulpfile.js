@@ -4,7 +4,6 @@ var cssmin = require('gulp-cssmin');
 var exec = require('child_process').exec;
 var less = require('gulp-less');
 var rename = require("gulp-rename");
-var size = require('gulp-size');
 var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
 var fs = require('fs');

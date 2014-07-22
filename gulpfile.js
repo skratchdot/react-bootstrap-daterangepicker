@@ -17,7 +17,7 @@ gulp.task('lint', function () {
 			//'--show-non-errors',
 			'--config',
 			'./.jshint',
-			'./index.js'
+			'./index.js ./demo/*.js'
 		].join(' '),
 	function (err, stdout, stderr) {
 		if (stdout) {

@@ -4,10 +4,6 @@ var React = require('react');
 var Row = require('react-bootstrap').Row;
 var Col = require('react-bootstrap').Col;
 var Button = require('react-bootstrap').Button;
-var Glyphicon = require('react-bootstrap').Glyphicon;
-var DateRangePicker = require('../index.js');
-var moment = require('moment');
-var fileContent = require('./AppContent').content;
 
 module.exports = React.createClass({
 	render: function () {

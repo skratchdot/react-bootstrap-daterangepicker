@@ -1,9 +1,11 @@
 .git*
 _ignore/
 demo/
+src/
 test/
 www/
 .DS_Store
+.gitignore
 .npm-debug.log
 .project
 .travis.yml

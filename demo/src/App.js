@@ -7,7 +7,7 @@ var Col = require('react-bootstrap').Col;
 var Button = require('react-bootstrap').Button;
 var Glyphicon = require('react-bootstrap').Glyphicon;
 var Header = require('./Header');
-var DateRangePicker = require('../index.js');
+var DateRangePicker = require('../../src/index.js');
 var moment = require('moment');
 var fileContent = require('./AppContent').content;
 
@@ -59,9 +59,7 @@ var App = React.createClass({
 					</Col>
 					<Col md={9}>
 						<h2>Demo Source Code:</h2>
-						<textarea className="form-control" style={{width:'100%',height:'500px'}}>
-							{fileContent}
-						</textarea>
+						<textarea className="form-control" style={{width:'100%',height:'500px'}} readOnly value={fileContent} />
 					</Col>
 				</Row>
 			</Grid>

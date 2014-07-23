@@ -1,8 +1,8 @@
-# react-bootstrap-datetimepicker
+# react-bootstrap-daterangepicker
 
-[![NPM version](https://badge.fury.io/js/react-bootstrap-datetimepicker.svg)](http://badge.fury.io/js/react-bootstrap-datetimepicker)
-[![Dependency Status](https://david-dm.org/skratchdot/react-bootstrap-datetimepicker.svg)](https://david-dm.org/skratchdot/react-bootstrap-datetimepicker)
-[![devDependency Status](https://david-dm.org/skratchdot/react-bootstrap-datetimepicker/dev-status.svg)](https://david-dm.org/skratchdot/react-bootstrap-datetimepicker#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/react-bootstrap-daterangepicker.svg)](http://badge.fury.io/js/react-bootstrap-daterangepicker)
+[![Dependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker)
+[![devDependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker/dev-status.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker#info=devDependencies)
 
 
 ## Description
@@ -14,11 +14,11 @@ A date/time picker for react (using bootstrap). This is a react port of:
 
 ## Getting Started
 
-Install the module with: `npm install --save react-bootstrap-datetimepicker`
+Install the module with: `npm install --save react-bootstrap-daterangepicker`
 
 ```javascript
 var React = require('react');
-var DateRangePicker = require('react-bootstrap-datetimepicker');
+var DateRangePicker = require('react-bootstrap-daterangepicker');
 var someReactComponent = React.createClass({
     render: function () {
         return (
@@ -68,8 +68,8 @@ var someReactComponent = React.createClass({
 
 ## Links
 
-- [Source Code](https://github.com/skratchdot/react-bootstrap-datetimepicker)
-- [Live Demo](http://projects.skratchdot.com/react-bootstrap-datetimepicker/)
+- [Source Code](https://github.com/skratchdot/react-bootstrap-daterangepicker)
+- [Live Demo](http://projects.skratchdot.com/react-bootstrap-daterangepicker/)
 - [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
 
 

@@ -1,9 +1,9 @@
 /** @jsx React.DOM */
 'use strict';
 /**
- * react-bootstrap-datetimepicker.js
+ * react-bootstrap-daterangepicker.js
  * 
- * A slightly modified version of bootstrap-datetimepicker.js for use in react and npm.  Original copyright below.
+ * A slightly modified version of bootstrap-daterangepicker.js for use in react and npm.  Original copyright below.
  * 
  * ORIGINAL COPYRIGHT:
  * 
@@ -17,7 +17,7 @@
 var React = require('react');
 var $ = require('jquery');
 var moment = require('moment');
-var DateRangePicker; // slightly modified version of original bootstrap-datetimepicker code at the bottom of this file
+var DateRangePicker; // slightly modified version of original bootstrap-daterangepicker code at the bottom of this file
 
 /* this is our export React class */
 module.exports = React.createClass({
@@ -74,7 +74,7 @@ module.exports = React.createClass({
 	}
 });
 
-/* this is the original bootstrap-datetimepicker code. slightly modified to pass jshint and use npm */
+/* this is the original bootstrap-daterangepicker code. slightly modified to pass jshint and use npm */
 DateRangePicker = function (element, options, cb) {
 
     // by default, the daterangepicker element is placed at the bottom of HTML body

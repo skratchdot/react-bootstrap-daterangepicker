@@ -12,12 +12,12 @@ module.exports = React.createClass({
 				<Col md={12}>
 					<h1 className="page-header">
 						<div className="pull-left">
-							react-bootstrap-datetimepicker
+							react-bootstrap-daterangepicker
 							&nbsp;
 							<small>DEMO</small>
 						</div>
 						<div className="pull-right">
-							<Button bsStyle="primary" className="pull-right" href="https://github.com/skratchdot/react-bootstrap-datetimepicker">Source Code / Readme</Button>
+							<Button bsStyle="primary" className="pull-right" href="https://github.com/skratchdot/react-bootstrap-daterangepicker">Source Code / Readme</Button>
 						</div>
 						<div className="clearfix"></div>
 					</h1>

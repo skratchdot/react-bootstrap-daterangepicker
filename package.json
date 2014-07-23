@@ -33,5 +33,15 @@
     "jsxhint": "^0.4.14",
     "react-bootstrap": "^0.11.0",
     "reactify": "^0.14.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "date",
+    "range",
+    "picker",
+    "selector",
+    "datetime",
+    "ui"
+  ]
 }

@@ -7,6 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "skratchdot",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/skratchdot/react-bootstrap-datetimepicker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skratchdot/react-bootstrap-datetimepicker/issues"
+  },
   "license": "Apache-2.0",
   "dependencies": {
     "jquery": "^2.1.1",

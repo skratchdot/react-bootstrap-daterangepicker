@@ -36,17 +36,17 @@ For in depth documentation, see the original
 
 You can pass all the same props as the original plugin:
 
-- startDate, endDate, minDate, maxDate, dateLimit, showDropdowns, showWeekNumbers,
+- **startDate, endDate, minDate, maxDate, dateLimit, showDropdowns, showWeekNumbers,
   timePicker, timePickerIncrement, timePicker12Hour, ranges, opens, buttonClasses,
-  applyClass, cancelClass, format, separator, locale, singleDatePicker, parentEl
+  applyClass, cancelClass, format, separator, locale, singleDatePicker, parentEl**
 
 You can listen to the following 5 events:
 
-- onShow: thrown when the widget is shown
-- onHide: thrown when the widget is hidden
-- onApply: thrown when the apply button is clicked
-- onCancel: thrown when the cancel button is clicked
-- onEvent: thrown when any of the 4 events above are triggered
+- **onShow**: thrown when the widget is shown
+- **onHide**: thrown when the widget is hidden
+- **onApply**: thrown when the apply button is clicked
+- **onCancel**: thrown when the cancel button is clicked
+- **onEvent**: thrown when any of the 4 events above are triggered
 
 All 5 of the events above should take a handler that is passed 2 arguments: **event** and **picker**
 

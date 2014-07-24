@@ -6,7 +6,7 @@ var less = require('gulp-less');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
-var jsx = require('gulp-jsx');
+var react = require('gulp-react');
 var fs = require('fs');
 
 var port = 8080;
@@ -29,7 +29,7 @@ gulp.task('lint', function () {
 
 gulp.task('prepublish', function () {
 	gulp.src('./src/index.js')
-		.pipe(jsx())
+		.pipe(react())
 		.pipe(gulp.dest('./lib'));
 });
 

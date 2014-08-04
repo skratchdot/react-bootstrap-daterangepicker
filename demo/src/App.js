@@ -16,21 +16,23 @@ var App = React.createClass({
 		return {
 			ranges: {
 				'Today': [moment(), moment()],
-				'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
-				'Last 7 Days': [moment().subtract('days', 6), moment()],
-				'Last 30 Days': [moment().subtract('days', 29), moment()],
+				'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+				'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+				'Last 30 Days': [moment().subtract(29, 'days'), moment()],
 				'This Month': [moment().startOf('month'), moment().endOf('month')],
-				'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+				'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
 			},
-			startDate: moment().subtract('days', 29),
+			startDate: moment().subtract(29, 'days'),
 			endDate: moment()
 		};
 	},
 	handleEvent: function (event, picker) {
+		/*
 		this.setState({
 			startDate: picker.startDate,
 			endDate: picker.endDate
 		});
+		*/
 	},
 	render: function () {
 		var start = this.state.startDate.format('YYYY-MM-DD');

@@ -8,6 +8,7 @@
 */
 
 (function(root, factory) {
+  'use strict';
 
   if (typeof define === 'function' && define.amd) {
     define(['moment', 'jquery', 'exports'], function(momentjs, $, exports) {
@@ -32,6 +33,7 @@
   }
 
 }(this, function(root, daterangepicker, moment, $) {
+    'use strict';
 
     var DateRangePicker = function (element, options, cb) {
 
@@ -282,7 +284,7 @@
             }
 
             // update day names order to firstDay
-            if (this.locale.firstDay != 0) {
+            if (this.locale.firstDay !== 0) {
                 var iterator = this.locale.firstDay;
                 while (iterator > 0) {
                     this.locale.daysOfWeek.push(this.locale.daysOfWeek.shift());
@@ -298,7 +300,7 @@
                     var val = $(this.element).val();
                     var split = val.split(this.separator);
                     start = end = null;
-                    if (split.length == 2) {
+                    if (split.length === 2) {
                         start = moment(split[0], this.format);
                         end = moment(split[1], this.format);
                     } else if (this.singleDatePicker) {
@@ -383,7 +385,7 @@
             };
 
             // XXX: This was edited to work in react. No longer blindly swapping on each .setOptions() call
-            if (this.opens == 'right') {
+            if (this.opens === 'right') {
                 //swap calendar positions
                 this.container.find('.calendar.start').removeClass('left').addClass('right');
                 this.container.find('.calendar.end').removeClass('right').addClass('left');
@@ -497,7 +499,7 @@
                 };
             }
 
-            if (this.opens == 'left') {
+            if (this.opens === 'left') {
                 this.container.css({
                     top: this.element.offset().top + this.element.outerHeight() - parentOffset.top,
                     right: $(window).width() - this.element.offset().left - this.element.outerWidth() - parentOffset.left,
@@ -589,7 +591,7 @@
         enterRange: function (e) {
             // mouse pointer has entered a range label
             var label = e.target.innerHTML;
-            if (label == this.locale.customRangeLabel) {
+            if (label === this.locale.customRangeLabel) {
                 this.updateView();
             } else {
                 var dates = this.ranges[label];
@@ -644,7 +646,7 @@
         clickRange: function (e) {
             var label = e.target.innerHTML;
             this.chosenLabel = label;
-            if (label == this.locale.customRangeLabel) {
+            if (label === this.locale.customRangeLabel) {
                 this.showCalendars();
             } else {
                 var dates = this.ranges[label];
@@ -841,7 +843,7 @@
                     }
                 } else {
                     //ignore times when comparing dates if time picker is not enabled
-                    if (this.startDate.format('YYYY-MM-DD') == this.ranges[range][0].format('YYYY-MM-DD') && this.endDate.format('YYYY-MM-DD') == this.ranges[range][1].format('YYYY-MM-DD')) {
+                    if (this.startDate.format('YYYY-MM-DD') === this.ranges[range][0].format('YYYY-MM-DD') && this.endDate.format('YYYY-MM-DD') === this.ranges[range][1].format('YYYY-MM-DD')) {
                         customRange = false;
                         this.chosenLabel = this.container.find('.ranges li:eq(' + i + ')')
                             .addClass('active').html();
@@ -882,7 +884,7 @@
             if (startDay > daysInLastMonth)
                 startDay -= 7;
 
-            if (dayOfWeek == this.locale.firstDay)
+            if (dayOfWeek === this.locale.firstDay)
                 startDay = daysInLastMonth - 6;
 
             var curDate = moment([lastYear, lastMonth, startDay, 12, minute]);
@@ -984,16 +986,16 @@
 
                 for (var col = 0; col < 7; col++) {
                     var cname = 'available ';
-                    cname += (calendar[row][col].month() == calendar[1][1].month()) ? '' : 'off';
+                    cname += (calendar[row][col].month() === calendar[1][1].month()) ? '' : 'off';
 
                     if ((minDate && calendar[row][col].isBefore(minDate, 'day')) || (maxDate && calendar[row][col].isAfter(maxDate, 'day'))) {
                         cname = ' off disabled ';
-                    } else if (calendar[row][col].format('YYYY-MM-DD') == selected.format('YYYY-MM-DD')) {
+                    } else if (calendar[row][col].format('YYYY-MM-DD') === selected.format('YYYY-MM-DD')) {
                         cname += ' active ';
-                        if (calendar[row][col].format('YYYY-MM-DD') == this.startDate.format('YYYY-MM-DD')) {
+                        if (calendar[row][col].format('YYYY-MM-DD') === this.startDate.format('YYYY-MM-DD')) {
                             cname += ' start-date ';
                         }
-                        if (calendar[row][col].format('YYYY-MM-DD') == this.endDate.format('YYYY-MM-DD')) {
+                        if (calendar[row][col].format('YYYY-MM-DD') === this.endDate.format('YYYY-MM-DD')) {
                             cname += ' end-date ';
                         }
                     } else if (calendar[row][col] >= this.startDate && calendar[row][col] <= this.endDate) {
@@ -1030,7 +1032,7 @@
                 }
 
                 for (i = start; i <= end; i++) {
-                    if (i == selected_hour) {
+                    if (i === selected_hour) {
                         html += '<option value="' + i + '" selected="selected">' + i + '</option>';
                     } else {
                         html += '<option value="' + i + '">' + i + '</option>';
@@ -1045,7 +1047,7 @@
                     var num = i;
                     if (num < 10)
                         num = '0' + num;
-                    if (i == selected.minute()) {
+                    if (i === selected.minute()) {
                         html += '<option value="' + i + '" selected="selected">' + num + '</option>';
                     } else {
                         html += '<option value="' + i + '">' + num + '</option>';

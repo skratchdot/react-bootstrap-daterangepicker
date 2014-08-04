@@ -46,8 +46,8 @@
 
         //create the picker HTML object
         var DRPTemplate = '<div class="daterangepicker dropdown-menu">' +
-                '<div class="calendar left"></div>' +
-                '<div class="calendar right"></div>' +
+                '<div class="calendar start left"></div>' +
+                '<div class="calendar end right"></div>' +
                 '<div class="ranges">' +
                   '<div class="range_inputs">' +
                     '<div class="daterangepicker_start_input">' +
@@ -382,12 +382,11 @@
                 calendar: []
             };
 
+            // XXX: This was edited to work in react. No longer blindly swapping on each .setOptions() call
             if (this.opens == 'right') {
                 //swap calendar positions
-                var left = this.container.find('.calendar.left');
-                var right = this.container.find('.calendar.right');
-                left.removeClass('left').addClass('right');
-                right.removeClass('right').addClass('left');
+                this.container.find('.calendar.start').removeClass('left').addClass('right');
+                this.container.find('.calendar.end').removeClass('right').addClass('left');
             }
 
             if (typeof options.ranges === 'undefined' && !this.singleDatePicker) {

@@ -31,7 +31,7 @@
     root.daterangepicker = factory(root, {}, root.momentjs, (root.jQuery || root.Zepto || root.ender || root.$));
   }
 
-}(this, function(root, daterangepicker, momentjs, $) {
+}(this, function(root, daterangepicker, moment, $) {
 
     var DateRangePicker = function (element, options, cb) {
 
@@ -159,9 +159,9 @@
                 toLabel: 'To',
                 weekLabel: 'W',
                 customRangeLabel: 'Custom Range',
-                daysOfWeek: moment()._lang._weekdaysMin.slice(),
-                monthNames: moment()._lang._monthsShort.slice(),
-                firstDay: moment()._lang._week.dow
+                daysOfWeek: moment()._locale._weekdaysMin.slice(),
+                monthNames: moment()._locale._monthsShort.slice(),
+                firstDay: moment()._locale._week.dow
             };
 
             this.cb = function () { };

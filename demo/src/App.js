@@ -27,12 +27,10 @@ var App = React.createClass({
 		};
 	},
 	handleEvent: function (event, picker) {
-		/*
 		this.setState({
 			startDate: picker.startDate,
 			endDate: picker.endDate
 		});
-		*/
 	},
 	render: function () {
 		var start = this.state.startDate.format('YYYY-MM-DD');

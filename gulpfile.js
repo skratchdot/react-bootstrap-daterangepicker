@@ -28,6 +28,8 @@ gulp.task('lint', function () {
 });
 
 gulp.task('prepublish', function () {
+	gulp.src('./src/daterangepicker.js')
+		.pipe(gulp.dest('./lib'));
 	gulp.src('./src/index.js')
 		.pipe(react())
 		.pipe(gulp.dest('./lib'));

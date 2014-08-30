@@ -24,7 +24,9 @@ var DateRangePicker = require('react-bootstrap-daterangepicker');
 var someReactComponent = React.createClass({
     render: function () {
         return (
-            <DateRangePicker startDate="1/1/2014" endDate="3/1/2014" />
+            <DateRangePicker startDate="1/1/2014" endDate="3/1/2014">
+                <div>Click Me To Open Picker!</div>
+            </DateRangePicker>
         );
     }
 });

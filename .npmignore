@@ -9,4 +9,5 @@ www/
 .npm-debug.log
 .project
 .travis.yml
+npm-debug.log
 TODO.md

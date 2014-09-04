@@ -84,7 +84,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', function () {
-	gulp.watch(['./index.js','./demo/src/**/*.js'], ['build']);
+	gulp.watch(['./src/index.js','./demo/src/**/*.js'], ['build']);
 });
 
 gulp.task('build', ['lint', 'fonts', 'app-content', 'demo', 'prepublish']);

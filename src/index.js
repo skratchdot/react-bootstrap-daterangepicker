@@ -2,7 +2,7 @@
 'use strict';
 /**
  * react-bootstrap-daterangepicker.js
- * 
+ *
  * A slightly modified version of bootstrap-daterangepicker.js for use in react and npm.
  * Original copyright in: ./src/daterangepicker.js
  */
@@ -17,6 +17,7 @@ module.exports = React.createClass({
 		'timePicker','timePickerIncrement','timePicker12Hour','ranges','opens','buttonClasses',
 		'applyClass','cancelClass','format','separator','locale','singleDatePicker','parentEl'
 	],
+
 	makeEventHandler: function (eventType) {
 		return function (event, picker) {
 			if (typeof this.props.onEvent === 'function') {
@@ -27,17 +28,23 @@ module.exports = React.createClass({
 			}
 		}.bind(this);
 	},
+
+  getOptionsFromProps: function() {
+		var options, props = this.props;
+		this.options.forEach(function(option) {
+			if (props.hasOwnProperty(option)) {
+				options = options || {};
+				options[option] = props[option];
+			}
+		});
+		return options;
+	},
+
 	setOptionsFromProps: function () {
-		var currentOptions = {}, needToInit = false, $this = this;
-		if ($this.$picker) {
-			$this.options.forEach(function (option) {
-				if ($this.props.hasOwnProperty(option)) {
-					currentOptions[option] = $this.props[option];
-					needToInit = true;
-				}
-			});
-			if (needToInit) {
-				$this.$picker.data('daterangepicker').setOptions(currentOptions);
+		var currentOptions = this.getOptionsFromProps();
+		if (this.$picker) {
+			if (currentOptions) {
+				this.$picker.data('daterangepicker').setOptions(currentOptions);
 			}
 		}
 	},
@@ -45,14 +52,12 @@ module.exports = React.createClass({
 		var $this = this;
 		$this.$picker = $(this.refs.picker.getDOMNode());
 		// initialize
-		$this.$picker.daterangepicker();
+		$this.$picker.daterangepicker(this.getOptionsFromProps());
 		// attach event listeners
 		['Show','Hide','Apply','Cancel'].forEach(function (event) {
 			var lcase = event.toLowerCase();
 			$this.$picker.on(lcase + '.daterangepicker', $this.makeEventHandler('on' + event));
 		});
-		// initial options from this.props
-		$this.setOptionsFromProps();
 	},
 	componentWillUnmount: function () {
 		this.$picker = null;

@@ -1,4 +1,3 @@
-/** @jsx React.DOM */
 'use strict';
 /**
  * react-bootstrap-daterangepicker.js
@@ -8,6 +7,7 @@
  */
 var React = require('react');
 var $ = require('jquery');
+var div   = React.DOM.div;
 var DateRangePicker = require('./daterangepicker.js');
 
 /* this is our export React class */
@@ -65,7 +65,7 @@ module.exports = React.createClass({
 	render: function () {
 		this.setOptionsFromProps();
 		return this.transferPropsTo(
-			<div ref="picker">{this.props.children}</div>
+			div({ ref: "picker" }, this.props.children)
 		);
 	}
 });

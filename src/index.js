@@ -13,11 +13,11 @@ var DateRangePicker = require('./daterangepicker.js');
 /* this is our export React class */
 module.exports = React.createClass({
 	$picker: null,
-	options: ['startDate','endDate','minDate','maxDate','dateLimit','showDropdowns','showWeekNumbers',
-		'timePicker','timePickerIncrement','timePicker12Hour','ranges','opens','buttonClasses',
-		'applyClass','cancelClass','format','separator','locale','singleDatePicker','parentEl'
+	options: [
+		'startDate', 'endDate', 'minDate', 'maxDate', 'dateLimit', 'showDropdowns', 'showWeekNumbers',
+		'timePicker', 'timePickerIncrement', 'timePicker12Hour', 'ranges', 'opens', 'buttonClasses',
+		'applyClass', 'cancelClass', 'format', 'separator', 'locale', 'singleDatePicker', 'parentEl'
 	],
-
 	makeEventHandler: function (eventType) {
 		return function (event, picker) {
 			if (typeof this.props.onEvent === 'function') {
@@ -28,10 +28,9 @@ module.exports = React.createClass({
 			}
 		}.bind(this);
 	},
-
-  getOptionsFromProps: function() {
+	getOptionsFromProps: function () {
 		var options, props = this.props;
-		this.options.forEach(function(option) {
+		this.options.forEach(function (option) {
 			if (props.hasOwnProperty(option)) {
 				options = options || {};
 				options[option] = props[option];
@@ -39,7 +38,6 @@ module.exports = React.createClass({
 		});
 		return options;
 	},
-
 	setOptionsFromProps: function () {
 		var currentOptions = this.getOptionsFromProps();
 		if (this.$picker) {
@@ -54,7 +52,7 @@ module.exports = React.createClass({
 		// initialize
 		$this.$picker.daterangepicker(this.getOptionsFromProps());
 		// attach event listeners
-		['Show','Hide','Apply','Cancel'].forEach(function (event) {
+		['Show', 'Hide', 'Apply', 'Cancel'].forEach(function (event) {
 			var lcase = event.toLowerCase();
 			$this.$picker.on(lcase + '.daterangepicker', $this.makeEventHandler('on' + event));
 		});

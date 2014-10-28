@@ -1,7 +1,6 @@
 .git*
 _ignore/
 demo/
-src/
 test/
 www/
 .DS_Store

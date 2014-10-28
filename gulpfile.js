@@ -27,14 +27,6 @@ gulp.task('lint', function () {
 	});
 });
 
-gulp.task('prepublish', function () {
-	gulp.src('./src/daterangepicker.js')
-		.pipe(gulp.dest('./dist'));
-	gulp.src('./src/index.js')
-		.pipe(react())
-		.pipe(gulp.dest('./dist'));
-});
-
 gulp.task('fonts', function () {
 	gulp.src('./node_modules/bootstrap/dist/fonts/*')
 		.pipe(gulp.dest('./demo/www/fonts/'));
@@ -87,7 +79,7 @@ gulp.task('watch', function () {
 	gulp.watch(['./src/index.js','./demo/src/**/*.js'], ['build']);
 });
 
-gulp.task('build', ['lint', 'fonts', 'app-content', 'demo', 'prepublish']);
+gulp.task('build', ['lint', 'fonts', 'app-content', 'demo']);
 gulp.task('default', ['build', 'server', 'watch']);
 
 //handle errors

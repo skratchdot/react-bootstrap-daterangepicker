@@ -4,7 +4,6 @@
   "description": "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
   "main": "./src/index.js",
   "scripts": {
-    "prepublish": "gulp prepublish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "skratchdot",

@@ -3,7 +3,7 @@
 var React = require('react');
 var BS = require('react-bootstrap');
 var moment = require('moment');
-var DateRangePicker = require('../../src/index.js');
+var DateRangePicker = require('../../lib/index.js');
 var Header = require('./Header');
 var fileContent = require('./AppContent').content;
 

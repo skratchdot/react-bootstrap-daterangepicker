@@ -18,7 +18,7 @@ gulp.task('lint', function () {
 			//'--show-non-errors',
 			'--config',
 			'./.jshint',
-			'./src/*.js ./demo/src/*.js'
+			'./lib/*.js ./demo/src/*.js'
 		].join(' '),
 	function (err, stdout, stderr) {
 		if (stdout) {
@@ -76,7 +76,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', function () {
-	gulp.watch(['./src/index.js','./demo/src/**/*.js'], ['build']);
+	gulp.watch(['./lib/index.js','./demo/src/**/*.js'], ['build']);
 });
 
 gulp.task('build', ['lint', 'fonts', 'app-content', 'demo']);

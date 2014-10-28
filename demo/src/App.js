@@ -1,14 +1,10 @@
 /** @jsx React.DOM */
 'use strict';
 var React = require('react');
-var Grid = require('react-bootstrap').Grid;
-var Row = require('react-bootstrap').Row;
-var Col = require('react-bootstrap').Col;
-var Button = require('react-bootstrap').Button;
-var Glyphicon = require('react-bootstrap').Glyphicon;
-var Header = require('./Header');
-var DateRangePicker = require('../../src/index.js');
+var BS = require('react-bootstrap');
 var moment = require('moment');
+var DateRangePicker = require('../../src/index.js');
+var Header = require('./Header');
 var fileContent = require('./AppContent').content;
 
 var App = React.createClass({
@@ -40,29 +36,29 @@ var App = React.createClass({
 			label = start;
 		}
 		return (
-			<Grid>
+			<BS.Grid>
 				<Header />
-				<Row>
-					<Col md={3}>
+				<BS.Row>
+					<BS.Col md={3}>
 						<h2>Demo:</h2>
 						<DateRangePicker startDate={this.state.startDate} endDate={this.state.endDate} ranges={this.state.ranges} onEvent={this.handleEvent}>
-							<Button className="selected-date-range-btn" style={{width:'100%'}}>
-								<div className="pull-left"><Glyphicon glyph="calendar" /></div>
+							<BS.Button className="selected-date-range-btn" style={{width:'100%'}}>
+								<div className="pull-left"><BS.Glyphicon glyph="calendar" /></div>
 								<div className="pull-right">
 									<span>
 										{label}
 									</span>
 									<span className="caret"></span>
 								</div>
-							</Button>
+							</BS.Button>
 						</DateRangePicker>
-					</Col>
-					<Col md={9}>
+					</BS.Col>
+					<BS.Col md={9}>
 						<h2>Demo Source Code:</h2>
 						<textarea className="form-control" style={{width:'100%',height:'500px'}} readOnly value={fileContent} />
-					</Col>
-				</Row>
-			</Grid>
+					</BS.Col>
+				</BS.Row>
+			</BS.Grid>
 		);
 	}
 });

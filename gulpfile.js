@@ -29,10 +29,10 @@ gulp.task('lint', function () {
 
 gulp.task('prepublish', function () {
 	gulp.src('./src/daterangepicker.js')
-		.pipe(gulp.dest('./lib'));
+		.pipe(gulp.dest('./dist'));
 	gulp.src('./src/index.js')
 		.pipe(react())
-		.pipe(gulp.dest('./lib'));
+		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('fonts', function () {

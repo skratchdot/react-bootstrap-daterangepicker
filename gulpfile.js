@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var cssmin = require('gulp-cssmin');
+var download = require('gulp-download');
 var exec = require('child_process').exec;
 var less = require('gulp-less');
 var rename = require("gulp-rename");
@@ -10,6 +11,17 @@ var react = require('gulp-react');
 var fs = require('fs');
 
 var port = 8080;
+
+// this task downloads the lastest .js and .css from the 'parent'
+// library that we are wrapping for react
+gulp.task('download', function () {
+	// download the .js file
+	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.js')
+		.pipe(gulp.dest('./lib/'));
+	// download the .css files
+	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker-bs3.css')
+		.pipe(gulp.dest('./css/'));
+});
 
 gulp.task('lint', function () {
 	exec([

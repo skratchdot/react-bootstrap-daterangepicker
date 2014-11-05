@@ -32,7 +32,7 @@ var someReactComponent = React.createClass({
 });
 ```
 
-3) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker-bs3.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/gh-pages/css/daterangepicker-bs3.css) (don't hotlink- download and host your own copy)
+3) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker-bs3.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/master/css/daterangepicker-bs3.css) (don't hotlink- download and host your own copy)
 
 ```html
 <link rel="stylesheet" href="daterangepicker-bs3.css" type="text/css" />

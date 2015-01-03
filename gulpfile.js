@@ -30,7 +30,9 @@ gulp.task('lint', function () {
 			//'--show-non-errors',
 			'--config',
 			'./.jshint',
-			'./lib/*.js ./demo/src/*.js'
+			'./lib/*.js ./demo/src/*.js',
+			'--exclude',
+			'./lib/daterangepicker.js'
 		].join(' '),
 	function (err, stdout, stderr) {
 		if (stdout) {

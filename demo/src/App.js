@@ -64,7 +64,7 @@ var App = React.createClass({
 });
 
 // init our demo app
-React.renderComponent(<App />, document.getElementById('app'));
+React.render(<App />, document.getElementById('app'));
 
 // we are using browserify. setup the browser.
 exports.React = window.React = React;

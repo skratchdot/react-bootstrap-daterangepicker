@@ -32,10 +32,10 @@ var someReactComponent = React.createClass({
 });
 ```
 
-3) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker-bs3.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/master/css/daterangepicker-bs3.css) (don't hotlink- download and host your own copy)
+3) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/master/css/daterangepicker.css) (don't hotlink- download and host your own copy)
 
 ```html
-<link rel="stylesheet" href="daterangepicker-bs3.css" type="text/css" />
+<link rel="stylesheet" href="daterangepicker.css" type="text/css" />
 ```
 
 ## Documentation
@@ -46,8 +46,8 @@ For in depth documentation, see the original
 You can pass all the same props as the original plugin:
 
 - **startDate, endDate, minDate, maxDate, dateLimit, timeZone, showDropdowns, showWeekNumbers,
-  timePicker, timePickerIncrement, timePicker12Hour, timePickerSeconds, ranges, opens, buttonClasses,
-  applyClass, cancelClass, format, separator, locale, singleDatePicker, parentEl**
+  timePicker, timePickerIncrement, timePicker24Hour, timePickerSeconds, ranges, opens, drops,
+  buttonClasses, applyClass, cancelClass, locale, singleDatePicker, parentEl**
 
 You can listen to the following 7 events:
 

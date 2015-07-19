@@ -19,7 +19,7 @@ gulp.task('download', function () {
 	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.js')
 		.pipe(gulp.dest('./lib/'));
 	// download the .css files
-	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker-bs3.css')
+	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.css')
 		.pipe(gulp.dest('./css/'));
 });
 

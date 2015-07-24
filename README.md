@@ -20,11 +20,13 @@ A date/time picker for react (using bootstrap). This is a react port of:
 
 ```javascript
 var React = require('react');
+var moment = require('moment');
+
 var DateRangePicker = require('react-bootstrap-daterangepicker');
 var someReactComponent = React.createClass({
     render: function () {
         return (
-            <DateRangePicker startDate="1/1/2014" endDate="3/1/2014">
+            <DateRangePicker startDate={moment("2014-04-23T09:54:51")} endDate={moment("2014-08-23T09:54:51")}>
                 <div>Click Me To Open Picker!</div>
             </DateRangePicker>
         );
@@ -48,6 +50,10 @@ You can pass all the same props as the original plugin:
 - **startDate, endDate, minDate, maxDate, dateLimit, timeZone, showDropdowns, showWeekNumbers,
   timePicker, timePickerIncrement, timePicker24Hour, timePickerSeconds, ranges, opens, drops,
   buttonClasses, applyClass, cancelClass, locale, singleDatePicker, parentEl**
+
+You can also use the following additional prop:
+- **alwaysShowCalendar:** Defaults to false.  If set to true and ranges are added the calendar will always be shown and any selection of the ranges will result in updating the calendars without hiding the control.  It is recommended that the styling of the ranges be changed to include a selector when using this options.  Change the style *.daterangepicker .ranges li:hover* to *.daterangepicker .ranges li:not(:last-child):hover*
+- **debug**: No value needed.  Used to output some debug information from the calendar.
 
 You can listen to the following 7 events:
 

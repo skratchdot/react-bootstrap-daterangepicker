@@ -36,7 +36,8 @@
     "jsxhint": "^0.14.0",
     "react-bootstrap": "^0.20.0",
     "reactify": "^1.1.0",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "wordwrap": "^1.0.0"
   },
   "keywords": [
     "react",

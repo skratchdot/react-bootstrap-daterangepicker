@@ -11,6 +11,7 @@ var connect = require('gulp-connect');
 var react = require('gulp-react');
 var request = require('request');
 var fs = require('fs');
+var wrap = require('wordwrap')(2, 80);
 
 var port = 8080;
 
@@ -38,6 +39,16 @@ gulp.task('get-options', function () {
 			'\treturn ' + JSON.stringify(options, null, '\t\t') + ';',
 			'};'
 		].join('\n'), 'utf-8');
+		// update README.md
+		var before = 'You can pass all the same props as the original plugin:',
+			after = 'You can listen to the following 7 events:',
+			readme = fs.readFileSync('./README.md').toString(),
+			newReadme = readme.slice(0, readme.indexOf(before) + before.length) +
+				'\n\n- **' +
+				wrap(options.join(', ')).slice(2) +
+				'**\n\n' +
+				readme.slice(readme.indexOf(after));
+		fs.writeFileSync('./README.md', newReadme, 'utf-8');
 	});
 });
 

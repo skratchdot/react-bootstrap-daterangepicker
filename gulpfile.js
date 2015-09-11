@@ -39,6 +39,10 @@ gulp.task('get-options', function () {
 			'\treturn ' + JSON.stringify(options, null, '\t\t') + ';',
 			'};'
 		].join('\n'), 'utf-8');
+		// fix options that contain html strings
+		options = options.map(function (option) {
+			return option.replace(/\</gi, '&lt;').replace(/\>/gi, '&gt;');
+		});
 		// update README.md
 		var before = 'You can pass all the same props as the original plugin:',
 			after = 'You can listen to the following 7 events:',

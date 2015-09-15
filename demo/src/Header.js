@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 'use strict';
 var React = require('react');
 var Row = require('react-bootstrap').Row;

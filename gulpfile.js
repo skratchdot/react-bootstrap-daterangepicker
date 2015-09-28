@@ -8,7 +8,6 @@ var less = require('gulp-less');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var connect = require('gulp-connect');
-var react = require('gulp-react');
 var request = require('request');
 var fs = require('fs');
 var wrap = require('wordwrap')(2, 80);
@@ -127,7 +126,7 @@ gulp.task('demo', function () {
 	gulp.src('./demo/src/App.js')
 		.pipe(browserify({
 			debug: true,
-			transform: ['reactify']
+			transform: ['babelify']
 		}))
 		.pipe(rename('demo.debug.js'))
 		.pipe(gulp.dest('./demo/www/js/'))

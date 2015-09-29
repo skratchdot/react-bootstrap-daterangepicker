@@ -14,14 +14,8 @@ var wrap = require('wordwrap')(2, 80);
 
 var port = 8080;
 
-// this task downloads the lastest .js and .css from the 'parent'
-// library that we are wrapping for react
-gulp.task('download', function () {
-	// download the .js file
-	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.js')
-		.pipe(gulp.dest('./lib/'));
-	// download the .css files
-	download('https://raw.githubusercontent.com/dangrossman/bootstrap-daterangepicker/master/daterangepicker.css')
+gulp.task('css-copy', function () {
+	gulp.src('./node_modules/bootstrap-daterangepicker/daterangepicker.css')
 		.pipe(gulp.dest('./css/'));
 });
 
@@ -147,7 +141,7 @@ gulp.task('watch', function () {
 	gulp.watch(['./lib/index.js','./demo/src/**/*.js'], ['build']);
 });
 
-gulp.task('update', ['download', 'get-options']);
+gulp.task('update', ['css-copy', 'get-options']);
 gulp.task('build', ['lint', 'fonts', 'app-content', 'demo']);
 gulp.task('default', ['build', 'server', 'watch']);
 

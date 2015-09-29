@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":  "node ./node_modules/gulp/bin/gulp.js build"
+    "build": "node ./node_modules/gulp/bin/gulp.js build"
   },
   "author": "skratchdot",
   "repository": {
@@ -17,6 +17,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "bootstrap-daterangepicker": "^2.0.11",
     "jquery": "1.11.3",
     "moment": ">=2.9.0",
     "react": "^0.14.0-rc1",

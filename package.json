@@ -4,7 +4,8 @@
   "description": "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":  "node ./node_modules/gulp/bin/gulp.js build"
   },
   "author": "skratchdot",
   "repository": {
@@ -18,24 +19,25 @@
   "dependencies": {
     "jquery": "1.11.3",
     "moment": ">=2.9.0",
-    "react": ">=0.12 || >=0.13.0-a"
+    "react": "^0.14.0-rc1",
+    "react-bootstrap": "^0.25.100-react-pre.1",
+    "react-dom": "^0.14.0-rc1"
   },
   "devDependencies": {
+    "babelify": "^6.3.0",
     "bootstrap": "^3.3.5",
     "cheerio": "^0.19.0",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
     "gulp-browserify": "^0.5.1",
     "gulp-connect": "^2.2.0",
     "gulp-cssmin": "^0.1.7",
     "gulp-download": "0.0.1",
     "gulp-less": "^3.0.3",
     "gulp-nodemon": "^2.0.4",
-    "gulp-react": "^3.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.4.1",
     "jsxhint": "^0.15.1",
-    "react-bootstrap": "^0.25.1",
-    "reactify": "^1.1.1",
     "request": "^2.61.0",
     "wordwrap": "^1.0.0"
   },

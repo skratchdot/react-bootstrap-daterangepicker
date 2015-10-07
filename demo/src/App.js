@@ -1,5 +1,6 @@
 'use strict';
 var React = require('react');
+var ReactDOM = require('react-dom');
 var BS = require('react-bootstrap');
 var moment = require('moment');
 var DateRangePicker = require('../../lib/index.js');
@@ -63,7 +64,7 @@ var App = React.createClass({
 });
 
 // init our demo app
-React.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
 // we are using browserify. setup the browser.
 exports.React = window.React = React;

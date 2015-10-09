@@ -21,7 +21,7 @@ gulp.task('css-copy', function () {
 
 gulp.task('print-missing-options', function () {
 	var downloadedOptions = require('./lib/get-options')(),
-		options = fs.readFileSync('./lib/daterangepicker.js', 'utf-8')
+		options = fs.readFileSync('./node_modules/bootstrap-daterangepicker/daterangepicker.js', 'utf-8')
 			.toString().split(' ').filter(function (item) {
 				return item.indexOf('options.') === 0;
 			}).map(function (item) {

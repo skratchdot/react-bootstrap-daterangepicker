@@ -18,10 +18,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "bootstrap-daterangepicker": "^2.1.12",
-    "jquery": "^1.11.3",
-    "moment": "^2.10.6",
-    "react": "^0.14.0",
-    "react-bootstrap": "^0.27.1"
+    "jquery": "^1.11.3"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0"
   },
   "devDependencies": {
     "babelify": "^6.3.0",
@@ -39,7 +39,11 @@
     "gulp-uglify": "^1.4.1",
     "jsxhint": "^0.15.1",
     "request": "^2.64.0",
-    "wordwrap": "^1.0.0"
+    "wordwrap": "^1.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-bootstrap": "^0.27.0",
+    "moment": "^2.10.6"
   },
   "keywords": [
     "react",

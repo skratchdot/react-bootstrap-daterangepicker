@@ -16,6 +16,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "jquery": "1.11.3",
     "moment": ">=2.9.0",
     "react": ">=0.12 || >=0.13.0-a"
   },

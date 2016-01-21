@@ -46,9 +46,10 @@ For in depth documentation, see the original
 
 You can pass all the same props as the original plugin:
 
-- **applyClass, autoApply, buttonClasses, cancelClass, dateLimit, drops, endDate,
-  linkedCalendars, locale, maxDate, minDate, opens, parentEl, ranges,
-  showDropdowns, showWeekNumbers, singleDatePicker, startDate, timePicker,
+- **&lt;input&gt;, applyClass, autoApply, autoUpdateInput, buttonClasses,
+  cancelClass, dateLimit, drops, endDate, isInvalidDate, linkedCalendars,
+  locale, maxDate, minDate, opens, parentEl, ranges, showDropdowns,
+  showWeekNumbers, singleDatePicker, startDate, template, timePicker,
   timePicker24Hour, timePickerIncrement, timePickerSeconds, timeZone**
 
 You can listen to the following 7 events:
@@ -79,9 +80,22 @@ var someReactComponent = React.createClass({
 ```
 
 
+## Release Notes
+
+Release notes can be found in the
+[Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/blob/master/CHANGELOG.md).
+
+We will try to release a new version of this project with each new
+[React](http://facebook.github.io/react/index.html)
+release.  We will bump the major version with each React release.  If you are using
+a specific version of `react` or `react-bootstrap`, make sure you specify the correct
+version of `react-bootstrap-daterangepicker` in your package.json file.
+
+
 ## Links
 
 - [Source Code](https://github.com/skratchdot/react-bootstrap-daterangepicker)
+- [Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/blob/master/CHANGELOG.md)
 - [Live Demo](http://projects.skratchdot.com/react-bootstrap-daterangepicker/)
 - [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
 

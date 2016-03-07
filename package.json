@@ -17,10 +17,10 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "bootstrap-daterangepicker": "^2.1.13"
+    "bootstrap-daterangepicker": "^2.1.18"
   },
   "peerDependencies": {
-    "jquery": "^1.11.3",
+    "jquery": ">=1.11.3",
     "react": "^0.14.0"
   },
   "devDependencies": {

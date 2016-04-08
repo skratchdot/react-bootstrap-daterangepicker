@@ -74,10 +74,10 @@ module.exports = React.createClass({
 		}
 
 		this.setOptionsFromProps();
-		return React.createElement(
-			'div',
-			Object.assign({}, this.props, { ref: 'picker' }),
-			this.props.children
+		return (
+			<div {...this.props} ref='picker'>
+				{this.props.children}
+			</div>
 		);
 	}
 });

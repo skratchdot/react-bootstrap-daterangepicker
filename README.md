@@ -91,6 +91,10 @@ release.  We will bump the major version with each React release.  If you are us
 a specific version of `react` or `react-bootstrap`, make sure you specify the correct
 version of `react-bootstrap-daterangepicker` in your package.json file.
 
+- React 15: react-bootstrap-daterangepicker v3.0.0+
+- React 14: react-bootstrap-daterangepicker v1.0.0+
+- React 13: react-bootstrap-daterangepicker v0.0.1+
+
 
 ## Links
 

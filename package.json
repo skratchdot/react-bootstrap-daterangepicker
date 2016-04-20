@@ -17,7 +17,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "bootstrap-daterangepicker": "2.1.13"
+    "bootstrap-daterangepicker": "git@github.com:wizeline/bootstrap-daterangepicker.git"
   },
   "peerDependencies": {
     "jquery": "^1.11.3",

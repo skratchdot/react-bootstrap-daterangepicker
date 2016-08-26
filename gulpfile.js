@@ -41,6 +41,15 @@ gulp.task('print-missing-options', function () {
 	console.log(options);
 });
 
+gulp.task('print-missing-proptypes', function () {
+	var DatePicker = require('./lib/index');
+	var picker = new DatePicker();
+	var missing = picker.options.filter(function (o) {
+		return !DatePicker.propTypes.hasOwnProperty(o);
+	});
+	console.log(missing);
+});
+
 gulp.task('get-options', function () {
 	request('http://www.daterangepicker.com/', function (error, response, body) {
 		var $ = cheerio.load(body);
@@ -147,6 +156,7 @@ gulp.task('watch', function () {
 	gulp.watch(['./lib/index.js','./demo/src/**/*.js'], ['build']);
 });
 
+gulp.task('check', ['print-missing-options', 'print-missing-proptypes']);
 gulp.task('update', ['download', 'get-options']);
 gulp.task('build', ['lint', 'fonts', 'app-content', 'demo']);
 gulp.task('default', ['build', 'server', 'watch']);

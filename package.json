@@ -5,6 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
     "build": "gulp build"
   },
   "author": "skratchdot",

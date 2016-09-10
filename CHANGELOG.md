@@ -1,5 +1,15 @@
 # Change Log
 
+## [3.2.2](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.2.2) (2016-09-10)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/1.1.0...3.2.2)
+
+## [1.1.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/1.1.0) (2016-09-10)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.2.1...1.1.0)
+
+**Closed issues:**
+
+- autoApply doesn't hide apply and cancel buttons [\#89](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/89)
+
 ## [3.2.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.2.1) (2016-08-26)
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.2.0...3.2.1)
 

@@ -1,5 +1,8 @@
 # Change Log
 
+## [2.1.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/2.1.0) (2016-09-10)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.2.2...2.1.0)
+
 ## [3.2.2](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.2.2) (2016-09-10)
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/1.1.0...3.2.2)
 

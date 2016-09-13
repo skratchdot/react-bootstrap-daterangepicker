@@ -43,7 +43,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "jsxhint": "^0.15.1",
-    "moment": "^2.14.1",
+    "moment": "^2.15.0",
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.1",

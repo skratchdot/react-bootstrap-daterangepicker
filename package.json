@@ -46,7 +46,7 @@
     "moment": "^2.14.1",
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.3",
-    "react-dom": "^15.3.1",
+    "react-dom": "^15.3.2",
     "request": "^2.74.0",
     "wordwrap": "^1.0.0"
   },

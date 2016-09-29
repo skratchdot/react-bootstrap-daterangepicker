@@ -39,7 +39,7 @@
     "gulp-cssmin": "^0.1.7",
     "gulp-download": "0.0.1",
     "gulp-less": "^3.1.0",
-    "gulp-nodemon": "^2.1.0",
+    "gulp-nodemon": "^2.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
     "jsxhint": "^0.15.1",

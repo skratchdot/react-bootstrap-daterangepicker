@@ -7,7 +7,8 @@
 
 ## Description
 
-A date/time picker for react (using bootstrap). This is a react port of:
+A date/time picker for react (using bootstrap). This is a react wrapper around
+an existing jQuery/bootstrap library (it is not a pure react port):
 
 [bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker)
 

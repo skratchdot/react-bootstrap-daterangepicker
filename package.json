@@ -44,7 +44,7 @@
     "gulp-uglify": "^2.0.0",
     "jsxhint": "^0.15.1",
     "moment": "^2.14.1",
-    "react": "^15.3.1",
+    "react": "^15.3.2",
     "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.1",
     "request": "^2.74.0",

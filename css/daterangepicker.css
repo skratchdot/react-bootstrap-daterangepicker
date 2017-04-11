@@ -134,7 +134,10 @@
     width: 40%; }
   .daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
     width: 50px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    border: 1px solid #08c;
+    border-radius: 4px;
+    background-color: #fff; }
   .daterangepicker .input-mini {
     border: 1px solid #ccc;
     border-radius: 4px;

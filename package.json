@@ -48,6 +48,8 @@
     "react-bootstrap": "^0.30.3",
     "react-dom": "^15.3.1",
     "request": "^2.74.0",
+    "prop-types": "^15.5.8",
+    "create-react-class": "^15.5.2",
     "wordwrap": "^1.0.0"
   },
   "keywords": [

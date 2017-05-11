@@ -207,6 +207,8 @@
       width: 160px; }
     .daterangepicker.single .ranges ul {
       width: 100%; }
+    .daterangepicker.single .calendar.single {
+      display: block; }
     .daterangepicker.single .calendar.left {
       clear: none; }
     .daterangepicker.single.ltr .ranges, .daterangepicker.single.ltr .calendar {

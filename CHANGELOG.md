@@ -1,5 +1,31 @@
 # Change Log
 
+## [3.3.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.3.0) (2017-05-18)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/2.1.1...3.3.0)
+
+**Closed issues:**
+
+- Display calendar above element [\#115](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/115)
+
+**Merged pull requests:**
+
+- Fixed prop-types and createClass issues [\#129](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/129) ([thevikas](https://github.com/thevikas))
+
+## [2.1.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/2.1.1) (2016-10-07)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/2.2.0...2.1.1)
+
+**Closed issues:**
+
+- v2.1.0 [\#92](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/92)
+
+## [2.2.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/2.2.0) (2016-10-06)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/2.1.0...2.2.0)
+
+**Closed issues:**
+
+- Is it possible to mount the daterangepicker within a given DOM node? [\#104](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/104)
+- React 15.2.1 deprecation warning [\#80](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/80)
+
 ## [2.1.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/2.1.0) (2016-09-10)
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.2.2...2.1.0)
 

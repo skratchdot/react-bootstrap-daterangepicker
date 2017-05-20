@@ -17,7 +17,9 @@ an existing jQuery/bootstrap library (it is not a pure react port):
 
 1) Install the module with: `npm install --save react-bootstrap-daterangepicker`
 
-2) Create your module (you need to use something like browserify to build)
+2) Install the needed peer dependencies: `npm install --save react react-dom jquery create-react-class prop-types`
+
+3) Create your module (you need to use something like browserify to build)
 
 ```javascript
 var React = require('react');
@@ -34,7 +36,7 @@ var someReactComponent = React.createClass({
 });
 ```
 
-3) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/master/css/daterangepicker.css) (don't hotlink- download and host your own copy)
+4) Include the daterangepicker CSS in your project somewhere. The CSS file is here: [daterangepicker.css](https://raw.githubusercontent.com/skratchdot/react-bootstrap-daterangepicker/master/css/daterangepicker.css) (don't hotlink- download and host your own copy)
 
 ```html
 <link rel="stylesheet" href="daterangepicker.css" type="text/css" />

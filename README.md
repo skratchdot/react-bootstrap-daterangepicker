@@ -17,7 +17,7 @@ an existing jQuery/bootstrap library (it is not a pure react port):
 
 1) Install the module with: `npm install --save react-bootstrap-daterangepicker`
 
-2) Install the needed `peerDependencies`: `npm install --save react react-dom jquery create-react-class prop-types`
+2) Install the needed peer dependencies: `npm install --save react react-dom jquery create-react-class prop-types`
 
 3) Create your module (you need to use something like browserify to build)
 

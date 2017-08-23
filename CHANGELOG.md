@@ -1,5 +1,20 @@
 # Change Log
 
+## [3.4.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.4.1) (2017-08-22)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.4.0..3.4.1)
+
+**Closed issues:**
+
+- React 15.6.1 update [\#145](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/145)
+- maxDate not working [\#144](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/144)
+- \[deleted\] [\#136](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/136)
+- Can't resolve 'create-react-class' after update to 3.4.0 [\#134](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/134)
+
+**Merged pull requests:**
+
+- fix `isCustomDate` proptype [\#150](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/150) ([yashksagar](https://github.com/yashksagar))
+- add instruction to install peer dependencies in readme [\#135](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/135) ([barbalex](https://github.com/barbalex))
+
 ## [3.4.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.4.0) (2017-05-18)
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.3.0...3.4.0)
 

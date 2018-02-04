@@ -1,9 +1,1408 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DateRangePicker - simple 1`] = `"<div>click me</div>"`;
-
-exports[`DateRangePicker - simple 2`] = `
+exports[`show picker 1`] = `
 <body>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+    style="top: 0px; left: 0px;"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control active"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      >
+        <table
+          class="table-condensed"
+        >
+          <thead>
+            <tr>
+              <th
+                class="prev available"
+              >
+                <i
+                  class="fa fa-chevron-left glyphicon glyphicon-chevron-left"
+                />
+              </th>
+              <th
+                class="month"
+                colspan="5"
+              >
+                Jan 2018
+              </th>
+              <th />
+            </tr>
+            <tr>
+              <th>
+                Su
+              </th>
+              <th>
+                Mo
+              </th>
+              <th>
+                Tu
+              </th>
+              <th>
+                We
+              </th>
+              <th>
+                Th
+              </th>
+              <th>
+                Fr
+              </th>
+              <th>
+                Sa
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="weekend off available"
+                data-title="r0c0"
+              >
+                31
+              </td>
+              <td
+                class="available"
+                data-title="r0c1"
+              >
+                1
+              </td>
+              <td
+                class="available"
+                data-title="r0c2"
+              >
+                2
+              </td>
+              <td
+                class="available"
+                data-title="r0c3"
+              >
+                3
+              </td>
+              <td
+                class="available"
+                data-title="r0c4"
+              >
+                4
+              </td>
+              <td
+                class="available"
+                data-title="r0c5"
+              >
+                5
+              </td>
+              <td
+                class="weekend available"
+                data-title="r0c6"
+              >
+                6
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r1c0"
+              >
+                7
+              </td>
+              <td
+                class="available"
+                data-title="r1c1"
+              >
+                8
+              </td>
+              <td
+                class="available"
+                data-title="r1c2"
+              >
+                9
+              </td>
+              <td
+                class="available"
+                data-title="r1c3"
+              >
+                10
+              </td>
+              <td
+                class="available"
+                data-title="r1c4"
+              >
+                11
+              </td>
+              <td
+                class="available"
+                data-title="r1c5"
+              >
+                12
+              </td>
+              <td
+                class="weekend available"
+                data-title="r1c6"
+              >
+                13
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r2c0"
+              >
+                14
+              </td>
+              <td
+                class="today active start-date active end-date available"
+                data-title="r2c1"
+              >
+                15
+              </td>
+              <td
+                class="available"
+                data-title="r2c2"
+              >
+                16
+              </td>
+              <td
+                class="available"
+                data-title="r2c3"
+              >
+                17
+              </td>
+              <td
+                class="available"
+                data-title="r2c4"
+              >
+                18
+              </td>
+              <td
+                class="available"
+                data-title="r2c5"
+              >
+                19
+              </td>
+              <td
+                class="weekend available"
+                data-title="r2c6"
+              >
+                20
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r3c0"
+              >
+                21
+              </td>
+              <td
+                class="available"
+                data-title="r3c1"
+              >
+                22
+              </td>
+              <td
+                class="available"
+                data-title="r3c2"
+              >
+                23
+              </td>
+              <td
+                class="available"
+                data-title="r3c3"
+              >
+                24
+              </td>
+              <td
+                class="available"
+                data-title="r3c4"
+              >
+                25
+              </td>
+              <td
+                class="available"
+                data-title="r3c5"
+              >
+                26
+              </td>
+              <td
+                class="weekend available"
+                data-title="r3c6"
+              >
+                27
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r4c0"
+              >
+                28
+              </td>
+              <td
+                class="available"
+                data-title="r4c1"
+              >
+                29
+              </td>
+              <td
+                class="available"
+                data-title="r4c2"
+              >
+                30
+              </td>
+              <td
+                class="available"
+                data-title="r4c3"
+              >
+                31
+              </td>
+              <td
+                class="off available"
+                data-title="r4c4"
+              >
+                1
+              </td>
+              <td
+                class="off available"
+                data-title="r4c5"
+              >
+                2
+              </td>
+              <td
+                class="weekend off available"
+                data-title="r4c6"
+              >
+                3
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend off available"
+                data-title="r5c0"
+              >
+                4
+              </td>
+              <td
+                class="off available"
+                data-title="r5c1"
+              >
+                5
+              </td>
+              <td
+                class="off available"
+                data-title="r5c2"
+              >
+                6
+              </td>
+              <td
+                class="off available"
+                data-title="r5c3"
+              >
+                7
+              </td>
+              <td
+                class="off available"
+                data-title="r5c4"
+              >
+                8
+              </td>
+              <td
+                class="off available"
+                data-title="r5c5"
+              >
+                9
+              </td>
+              <td
+                class="weekend off available"
+                data-title="r5c6"
+              >
+                10
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      >
+        <table
+          class="table-condensed"
+        >
+          <thead>
+            <tr>
+              <th />
+              <th
+                class="month"
+                colspan="5"
+              >
+                Feb 2018
+              </th>
+              <th
+                class="next available"
+              >
+                <i
+                  class="fa fa-chevron-right glyphicon glyphicon-chevron-right"
+                />
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Su
+              </th>
+              <th>
+                Mo
+              </th>
+              <th>
+                Tu
+              </th>
+              <th>
+                We
+              </th>
+              <th>
+                Th
+              </th>
+              <th>
+                Fr
+              </th>
+              <th>
+                Sa
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class="weekend off available"
+                data-title="r0c0"
+              >
+                28
+              </td>
+              <td
+                class="off available"
+                data-title="r0c1"
+              >
+                29
+              </td>
+              <td
+                class="off available"
+                data-title="r0c2"
+              >
+                30
+              </td>
+              <td
+                class="off available"
+                data-title="r0c3"
+              >
+                31
+              </td>
+              <td
+                class="available"
+                data-title="r0c4"
+              >
+                1
+              </td>
+              <td
+                class="available"
+                data-title="r0c5"
+              >
+                2
+              </td>
+              <td
+                class="weekend available"
+                data-title="r0c6"
+              >
+                3
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r1c0"
+              >
+                4
+              </td>
+              <td
+                class="available"
+                data-title="r1c1"
+              >
+                5
+              </td>
+              <td
+                class="available"
+                data-title="r1c2"
+              >
+                6
+              </td>
+              <td
+                class="available"
+                data-title="r1c3"
+              >
+                7
+              </td>
+              <td
+                class="available"
+                data-title="r1c4"
+              >
+                8
+              </td>
+              <td
+                class="available"
+                data-title="r1c5"
+              >
+                9
+              </td>
+              <td
+                class="weekend available"
+                data-title="r1c6"
+              >
+                10
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r2c0"
+              >
+                11
+              </td>
+              <td
+                class="available"
+                data-title="r2c1"
+              >
+                12
+              </td>
+              <td
+                class="available"
+                data-title="r2c2"
+              >
+                13
+              </td>
+              <td
+                class="available"
+                data-title="r2c3"
+              >
+                14
+              </td>
+              <td
+                class="available"
+                data-title="r2c4"
+              >
+                15
+              </td>
+              <td
+                class="available"
+                data-title="r2c5"
+              >
+                16
+              </td>
+              <td
+                class="weekend available"
+                data-title="r2c6"
+              >
+                17
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r3c0"
+              >
+                18
+              </td>
+              <td
+                class="available"
+                data-title="r3c1"
+              >
+                19
+              </td>
+              <td
+                class="available"
+                data-title="r3c2"
+              >
+                20
+              </td>
+              <td
+                class="available"
+                data-title="r3c3"
+              >
+                21
+              </td>
+              <td
+                class="available"
+                data-title="r3c4"
+              >
+                22
+              </td>
+              <td
+                class="available"
+                data-title="r3c5"
+              >
+                23
+              </td>
+              <td
+                class="weekend available"
+                data-title="r3c6"
+              >
+                24
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend available"
+                data-title="r4c0"
+              >
+                25
+              </td>
+              <td
+                class="available"
+                data-title="r4c1"
+              >
+                26
+              </td>
+              <td
+                class="available"
+                data-title="r4c2"
+              >
+                27
+              </td>
+              <td
+                class="available"
+                data-title="r4c3"
+              >
+                28
+              </td>
+              <td
+                class="off available"
+                data-title="r4c4"
+              >
+                1
+              </td>
+              <td
+                class="off available"
+                data-title="r4c5"
+              >
+                2
+              </td>
+              <td
+                class="weekend off available"
+                data-title="r4c6"
+              >
+                3
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="weekend off available"
+                data-title="r5c0"
+              >
+                4
+              </td>
+              <td
+                class="off available"
+                data-title="r5c1"
+              >
+                5
+              </td>
+              <td
+                class="off available"
+                data-title="r5c2"
+              >
+                6
+              </td>
+              <td
+                class="off available"
+                data-title="r5c3"
+              >
+                7
+              </td>
+              <td
+                class="off available"
+                data-title="r5c4"
+              >
+                8
+              </td>
+              <td
+                class="off available"
+                data-title="r5c5"
+              >
+                9
+              </td>
+              <td
+                class="weekend off available"
+                data-title="r5c6"
+              >
+                10
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`simple picker with 1 child 1`] = `"<button>click me</button>"`;
+
+exports[`simple picker with 1 child 2`] = `
+<body>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`simple picker with multiple children is wrapped in div 1`] = `"<div><div>clickme</div><div>clickme2</div></div>"`;
+
+exports[`simple picker with multiple children is wrapped in div 2`] = `
+<body>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`simple picker with text child is wrapped in div 1`] = `"<div>clickme</div>"`;
+
+exports[`simple picker with text child is wrapped in div 2`] = `
+<body>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
   <div
     class="daterangepicker dropdown-menu ltr show-calendar opensright"
   >

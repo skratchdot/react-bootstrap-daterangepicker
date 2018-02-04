@@ -1776,21 +1776,24 @@ var DateRangePicker = function (_Component) {
 
     _this.$picker = null;
     _this.options = getOptions();
-    _this.displayName = 'DateRangePicker';
     return _this;
   }
 
   createClass(DateRangePicker, [{
     key: 'makeEventHandler',
     value: function makeEventHandler(eventType) {
+      var _this2 = this;
+
+      var onEvent = this.props.onEvent;
+
       return function (event, picker) {
-        if (typeof this.props.onEvent === 'function') {
-          this.props.onEvent(event, picker);
+        if (typeof onEvent === 'function') {
+          onEvent(event, picker);
         }
-        if (typeof this.props[eventType] === 'function') {
-          this.props[eventType](event, picker);
+        if (typeof _this2.props[eventType] === 'function') {
+          _this2.props[eventType](event, picker);
         }
-      }.bind(this);
+      };
     }
   }, {
     key: 'getOptionsFromProps',
@@ -1876,19 +1879,17 @@ var DateRangePicker = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var props = Object.assign({}, this.props, { ref: 'picker' });
+      var children = this.props.children;
 
-      Object.keys(this.constructor.propTypes).forEach(function (key) {
-        delete props[key];
-      });
-
-      return React__default.createElement(
-        'div',
-        { ref: 'picker' },
-        this.props.children
-      );
-
-      //React.cloneElement(this.props.children, {ref: 'picker'});
+      if (React__default.Children.count(children) && React__default.isValidElement(children)) {
+        return React__default.cloneElement(children, { ref: 'picker' });
+      } else {
+        return React__default.createElement(
+          'div',
+          { ref: 'picker' },
+          children
+        );
+      }
     }
   }]);
   return DateRangePicker;

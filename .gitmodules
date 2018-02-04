@@ -1,4 +1,0 @@
-[submodule "demo/www"]
-	path = demo/www
-	url = git@github.com:skratchdot/react-bootstrap-daterangepicker.git
-	branch = gh-pages

@@ -23,9 +23,6 @@
     "url": "https://github.com/skratchdot/react-bootstrap-daterangepicker/issues"
   },
   "license": "Apache-2.0",
-  "dependencies": {
-    "bootstrap-daterangepicker": "^2.1.30"
-  },
   "peerDependencies": {
     "jquery": "*",
     "moment": "*",
@@ -41,6 +38,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.0.0",
+    "bootstrap-daterangepicker": "^2.1.30",
     "cheerio": "^0.22.0",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",

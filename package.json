@@ -68,9 +68,5 @@
     "selector",
     "datetime",
     "ui"
-  ],
-  "engines": {
-    "npm": ">=2.13.0",
-    "node": ">=0.12.0"
-  }
+  ]
 }

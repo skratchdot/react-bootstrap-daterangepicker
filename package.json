@@ -10,6 +10,7 @@
     "build": "rollup -c",
     "build:options": "./scripts/build-options.js",
     "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
+    "format": "prettier --write --single-quote '**/*.{js,md}'",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,6 +42,7 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.0.0",
     "cheerio": "^0.22.0",
+    "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",

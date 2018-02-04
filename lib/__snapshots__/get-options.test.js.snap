@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`get-options 1`] = `
+Array [
+  "<input>",
+  "alwaysShowCalendars",
+  "applyClass",
+  "autoApply",
+  "autoUpdateInput",
+  "buttonClasses",
+  "cancelClass",
+  "dateLimit",
+  "drops",
+  "endDate",
+  "isCustomDate",
+  "isInvalidDate",
+  "linkedCalendars",
+  "locale",
+  "maxDate",
+  "minDate",
+  "opens",
+  "parentEl",
+  "ranges",
+  "showCustomRangeLabel",
+  "showDropdowns",
+  "showISOWeekNumbers",
+  "showWeekNumbers",
+  "singleDatePicker",
+  "startDate",
+  "template",
+  "timePicker",
+  "timePicker24Hour",
+  "timePickerIncrement",
+  "timePickerSeconds",
+]
+`;

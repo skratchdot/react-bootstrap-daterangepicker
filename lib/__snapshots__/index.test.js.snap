@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateRangePicker - simple 1`] = `"<div>click me</div>"`;
+
+exports[`DateRangePicker - simple 2`] = `
+<body>
+  <div
+    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+  >
+    <div
+      class="calendar left"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_start"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="calendar right"
+    >
+      <div
+        class="daterangepicker_input"
+      >
+        <input
+          class="input-mini form-control"
+          name="daterangepicker_end"
+          type="text"
+          value=""
+        />
+        <i
+          class="fa fa-calendar glyphicon glyphicon-calendar"
+        />
+        <div
+          class="calendar-time"
+          style="display: none;"
+        >
+          <div />
+          <i
+            class="fa fa-clock-o glyphicon glyphicon-time"
+          />
+        </div>
+      </div>
+      <div
+        class="calendar-table"
+      />
+    </div>
+    <div
+      class="ranges"
+    >
+      <div
+        class="range_inputs"
+      >
+        <button
+          class="applyBtn btn btn-sm btn-success"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+         
+        <button
+          class="cancelBtn btn btn-sm btn-default"
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;

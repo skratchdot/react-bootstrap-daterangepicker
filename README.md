@@ -17,12 +17,14 @@ an existing jQuery/bootstrap library (it is not a pure react port):
 
 2. Install the needed peer dependencies: `npm install --save react react-dom jquery moment prop-types`
 
-3. This is a commonjs library. You will need a tool like browserify/webpack/etc to build your code.
+3. Include the bootstrap@3 css and fonts in your project.
+
+4. This is a commonjs library. You will need a tool like browserify/webpack/etc to build your code.
 
 ```javascript
 import React, { Component } from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
-// you will need the css that comes with bootstrap. if you are using
+// you will need the css that comes with bootstrap@3. if you are using
 // a tool like webpack, you can do the following:
 import 'bootstrap/dist/css/bootstrap.css';
 

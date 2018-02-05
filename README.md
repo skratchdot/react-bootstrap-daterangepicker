@@ -37,7 +37,7 @@ class MyComponent {
   render() {
     return (
       <DateRangePicker startDate="1/1/2014" endDate="3/1/2014">
-        Click Me To Open Picker!
+        <button>Click Me To Open Picker!</button>
       </DateRangePicker>
     );
   }

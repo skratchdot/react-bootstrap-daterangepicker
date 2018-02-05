@@ -1,9 +1,11 @@
 # react-bootstrap-daterangepicker
 
 [![NPM version](https://badge.fury.io/js/react-bootstrap-daterangepicker.svg)](http://badge.fury.io/js/react-bootstrap-daterangepicker)
+[![Build Status](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker.svg?branch=master)](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker)
+[![Code Climate](https://codeclimate.com/github/skratchdot/react-bootstrap-daterangepicker.png)](https://codeclimate.com/github/skratchdot/react-bootstrap-daterangepicker)
+[![Coverage Status](https://coveralls.io/repos/skratchdot/react-bootstrap-daterangepicker/badge.svg?branch=master&service=github)](https://coveralls.io/github/skratchdot/react-bootstrap-daterangepicker?branch=master)
 [![Dependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker)
 [![devDependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker/dev-status.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker#info=devDependencies)
-[![Build Status](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker.svg?branch=master)](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker)
 
 [![NPM](https://nodei.co/npm/react-bootstrap-daterangepicker.png)](https://npmjs.org/package/react-bootstrap-daterangepicker)
 

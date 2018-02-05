@@ -1,8 +1,8 @@
 # Change Log
 
-## [Unreleased](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/HEAD)
+## [4.0.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/4.0.1) (2018-02-05)
 
-[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.4.1...HEAD)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/3.4.1...4.0.1)
 
 **Closed issues:**
 

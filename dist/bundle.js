@@ -1866,7 +1866,6 @@ var DateRangePicker = function (_Component) {
     key: 'initializeDateRangePicker',
     value: function initializeDateRangePicker() {
       var $this = this;
-      //$ = (window.jQuery && window.jQuery.fn.daterangepicker)? window.jQuery : $;
       $this.$picker = $(reactDom.findDOMNode(this.refs.picker));
       // initialize
       $this.$picker.daterangepicker(this.getOptionsFromProps());
@@ -1879,21 +1878,27 @@ var DateRangePicker = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      var children = this.props.children;
+      var _props = this.props,
+          children = _props.children,
+          containerStyles = _props.containerStyles,
+          containerClass = _props.containerClass;
 
-      if (React__default.Children.count(children) && React__default.isValidElement(children)) {
-        return React__default.cloneElement(children, { ref: 'picker' });
-      } else {
-        return React__default.createElement(
-          'div',
-          { ref: 'picker' },
-          children
-        );
-      }
+      return React__default.createElement(
+        'div',
+        { ref: 'picker', className: containerClass, style: containerStyles },
+        children
+      );
     }
   }]);
   return DateRangePicker;
 }(React.Component);
+
+DateRangePicker.defaultProps = {
+  containerClass: 'react-bootstrap-daterangepicker-container',
+  containerStyles: {
+    display: 'inline-block'
+  }
+};
 
 DateRangePicker.propTypes = {
   '<input>': PropTypes.any,
@@ -1903,6 +1908,8 @@ DateRangePicker.propTypes = {
   autoUpdateInput: PropTypes.bool,
   buttonClasses: PropTypes.array,
   cancelClass: PropTypes.string,
+  containerClass: PropTypes.string,
+  containerStyles: PropTypes.object,
   dateLimit: PropTypes.object,
   drops: PropTypes.oneOf(['down', 'up']),
   endDate: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

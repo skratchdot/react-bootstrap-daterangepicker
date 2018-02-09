@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
-import DateRangePicker from '../lib/index.js';
+import DateRangePicker from '../src/index.js';
 import 'bootstrap/dist/css/bootstrap.css';
 
 storiesOf('DateRangePicker', module)

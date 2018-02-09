@@ -15,7 +15,7 @@ setDefaults({
 });
 
 setOptions({
-  name: packageInfo.name,
+  name: `${packageInfo.name} v${packageInfo.version}`,
   url: packageInfo.homepage,
   addonPanelInRight: true
 });

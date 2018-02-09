@@ -10,7 +10,7 @@
     "build": "npm-run-all clean build:options format cover build:lib build:storybook",
     "build:lib": "rollup -c",
     "build:options": "./scripts/build-options.js",
-    "build:storybook": "build-storybook -c .storybook -o ./gh-pages",
+    "build:storybook": "build-storybook -c .storybook -o ./docs",
     "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
     "clean": "rimraf ./coverage/",
     "cover": "npm run test -- --coverage",

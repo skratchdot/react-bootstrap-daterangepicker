@@ -12,7 +12,7 @@
     "build:options": "./scripts/build-options.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
     "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
-    "clean": "rimraf ./coverage/",
+    "clean": "rimraf ./coverage/ ./docs/",
     "cover": "npm run test -- --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls --verbose",
     "format": "prettier --write --single-quote '**/*.{js,md}'",
@@ -32,11 +32,11 @@
   },
   "license": "Apache-2.0",
   "peerDependencies": {
+    "bootstrap-daterangepicker": "*",
     "jquery": "*",
     "moment": "*",
     "prop-types": "*",
-    "react": "*",
-    "react-dom": "*"
+    "react": "*"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.12",
@@ -58,7 +58,9 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.1.4",
+    "jquery": "^3.3.1",
     "lolex": "^2.3.2",
+    "moment": "^2.20.1",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.10.2",
     "prop-types": "^15.6.0",
@@ -69,7 +71,6 @@
     "rollup": "^0.55.3",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-node-resolve": "^3.0.2",
-    "rollup-plugin-postcss": "^1.2.8",
     "wordwrap": "^1.0.0"
   },
   "keywords": [

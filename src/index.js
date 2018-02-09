@@ -1,11 +1,9 @@
 'use strict';
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 import $ from 'jquery';
 import getOptions from './get-options.js';
 import PropTypes from 'prop-types';
 import 'bootstrap-daterangepicker';
-import 'bootstrap-daterangepicker/daterangepicker.css';
 
 export class DateRangePicker extends Component {
   constructor(props) {
@@ -27,7 +25,7 @@ export class DateRangePicker extends Component {
   getOptionsFromProps(props) {
     var options;
     props = props || this.props;
-    this.options.forEach(function(option) {
+    this.options.forEach(option => {
       if (props.hasOwnProperty(option)) {
         options = options || {};
         options[option] = props[option];
@@ -37,42 +35,40 @@ export class DateRangePicker extends Component {
   }
   setOptionsFromProps(currentOptions) {
     var keys = Object.keys(currentOptions);
-    var $this = this;
-    if ($this.$picker) {
+    if (this.$picker) {
       if (currentOptions) {
-        keys.forEach(function(key) {
+        keys.forEach(key => {
           if (key === 'startDate') {
-            $this.$picker
+            this.$picker
               .data('daterangepicker')
               .setStartDate(currentOptions[key]);
           } else if (key === 'endDate') {
-            $this.$picker
+            this.$picker
               .data('daterangepicker')
               .setEndDate(currentOptions[key]);
           } else if (key === 'locale') {
             $.extend(
-              $this.$picker.data('daterangepicker')[key],
+              this.$picker.data('daterangepicker')[key],
               currentOptions[key]
             );
           } else {
-            $this.$picker.data('daterangepicker')[key] = currentOptions[key];
+            this.$picker.data('daterangepicker')[key] = currentOptions[key];
           }
         });
       }
     }
   }
   componentWillReceiveProps(nextProps) {
-    var $this = this;
-    if ($this.$picker) {
-      var currentOptions = $this.getOptionsFromProps();
-      var nextOptions = $this.getOptionsFromProps(nextProps);
+    if (this.$picker) {
+      var currentOptions = this.getOptionsFromProps();
+      var nextOptions = this.getOptionsFromProps(nextProps);
       var changedOptions = {};
-      $this.options.forEach(function(option) {
+      this.options.forEach(option => {
         if (currentOptions[option] !== nextOptions[option]) {
           changedOptions[option] = nextOptions[option];
         }
       });
-      $this.setOptionsFromProps(changedOptions);
+      this.setOptionsFromProps(changedOptions);
     }
   }
   componentDidMount() {
@@ -87,17 +83,15 @@ export class DateRangePicker extends Component {
     }
   }
   initializeDateRangePicker() {
-    var $this = this;
-    $this.$picker = $(findDOMNode(this.refs.picker));
     // initialize
-    $this.$picker.daterangepicker(this.getOptionsFromProps());
+    this.$picker.daterangepicker(this.getOptionsFromProps());
     // attach event listeners
     ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
-      function(event) {
+      event => {
         var lcase = event.toLowerCase();
-        $this.$picker.on(
+        this.$picker.on(
           lcase + '.daterangepicker',
-          $this.makeEventHandler('on' + event)
+          this.makeEventHandler('on' + event)
         );
       }
     );
@@ -105,7 +99,13 @@ export class DateRangePicker extends Component {
   render() {
     const { children, containerStyles, containerClass } = this.props;
     return (
-      <div ref="picker" className={containerClass} style={containerStyles}>
+      <div
+        ref={picker => {
+          this.$picker = $(picker);
+        }}
+        className={containerClass}
+        style={containerStyles}
+      >
         {children}
       </div>
     );

@@ -1,5 +1,4 @@
 import babel from 'rollup-plugin-babel';
-import postcss from 'rollup-plugin-postcss';
 import resolve from 'rollup-plugin-node-resolve';
 
 export default {
@@ -14,10 +13,13 @@ export default {
     babel({
       exclude: 'node_modules/**',
       plugins: ['external-helpers']
-    }),
-    postcss({
-      plugins: []
     })
   ],
-  external: ['moment', 'jquery', 'react', 'react-dom', 'prop-types']
+  external: [
+    'bootstrap-daterangepicker',
+    'moment',
+    'jquery',
+    'react',
+    'prop-types'
+  ]
 };

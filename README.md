@@ -70,6 +70,19 @@ You can listen to the following 7 events:
 
 All 7 of the events above should take a handler that is passed 2 arguments: **event** and **picker**
 
+There are 2 additional props you can pass, that are not part of the wrapped
+[bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker) project.
+Every `<DateRangePicker />` element emits a div element for the wrapper project to initialize itself against.
+
+The emitted div looks like this by default:
+
+```html
+<div class="react-bootstrap-daterangepicker-container" style="display:inline-block"></div>
+```
+
+* **containerStyles [object]**: the styles of the container `<div />` (default: `{ display: 'inline-block' }`)
+* **containerClass [string]**: the class of the container `<div />` (default: `'react-bootstrap-daterangepicker-container'`)
+
 #### Example event handler:
 
 ```javascript

@@ -965,7 +965,7 @@ exports[`show picker 1`] = `
 </body>
 `;
 
-exports[`simple picker with 1 child 1`] = `"<button>click me</button>"`;
+exports[`simple picker with 1 child 1`] = `"<div class=\\"react-bootstrap-daterangepicker-container\\" style=\\"display: inline-block;\\"><button>click me</button></div>"`;
 
 exports[`simple picker with 1 child 2`] = `
 <body>
@@ -1056,7 +1056,7 @@ exports[`simple picker with 1 child 2`] = `
 </body>
 `;
 
-exports[`simple picker with multiple children is wrapped in div 1`] = `"<div><div>clickme</div><div>clickme2</div></div>"`;
+exports[`simple picker with multiple children is wrapped in div 1`] = `"<div class=\\"react-bootstrap-daterangepicker-container\\" style=\\"display: inline-block;\\"><div>clickme</div><div>clickme2</div></div>"`;
 
 exports[`simple picker with multiple children is wrapped in div 2`] = `
 <body>
@@ -1315,7 +1315,7 @@ exports[`simple picker with multiple children is wrapped in div 2`] = `
 </body>
 `;
 
-exports[`simple picker with text child is wrapped in div 1`] = `"<div>clickme</div>"`;
+exports[`simple picker with text child is wrapped in div 1`] = `"<div class=\\"react-bootstrap-daterangepicker-container\\" style=\\"display: inline-block;\\">clickme</div>"`;
 
 exports[`simple picker with text child is wrapped in div 2`] = `
 <body>

@@ -1,18 +1,17 @@
 {
   "name": "react-bootstrap-daterangepicker",
   "version": "4.1.0",
-  "description":
-    "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
+  "description": "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
   "main": "./dist/bundle.js",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "build":
-      "npm-run-all clean build:options format lint cover build:lib build:storybook",
+    "build": "npm-run-all clean build:options format lint cover build:lib build:storybook",
     "build:lib": "rollup -c",
     "build:options": "./scripts/build-options.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
-    "changelog":
-      "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
+    "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
     "clean": "rimraf ./coverage/ ./docs/",
     "cover": "npm run test -- --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls --verbose",
@@ -30,8 +29,7 @@
     "url": "git://github.com/skratchdot/react-bootstrap-daterangepicker.git"
   },
   "bugs": {
-    "url":
-      "https://github.com/skratchdot/react-bootstrap-daterangepicker/issues"
+    "url": "https://github.com/skratchdot/react-bootstrap-daterangepicker/issues"
   },
   "license": "Apache-2.0",
   "peerDependencies": {

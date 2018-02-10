@@ -65,7 +65,15 @@ storiesOf('DateRangePicker', module)
     const showDropdowns = boolean('showDropdowns', true);
     return (
       <DateRangePicker showDropdowns={showDropdowns}>
-        {' '}
+        <button>{buttonLabel}</button>
+      </DateRangePicker>
+    );
+  })
+  .add('singleDatePicker', () => {
+    const buttonLabel = text('label', 'click to open');
+    const singleDatePicker = boolean('singleDatePicker', true);
+    return (
+      <DateRangePicker singleDatePicker={singleDatePicker}>
         <button>{buttonLabel}</button>
       </DateRangePicker>
     );

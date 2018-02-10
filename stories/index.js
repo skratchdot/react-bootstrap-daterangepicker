@@ -1,4 +1,5 @@
 import React from 'react';
+import jQuery from 'jquery';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -7,6 +8,9 @@ import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
 import DateRangePicker from '../src/index.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-daterangepicker/daterangepicker.css';
+
+// expose jQuery to window for debugging
+window.jQuery = window.$ = jQuery;
 
 storiesOf('DateRangePicker', module)
   .addDecorator((story, context) => withInfo()(story)(context))

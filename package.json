@@ -1,18 +1,17 @@
 {
   "name": "react-bootstrap-daterangepicker",
   "version": "4.1.0",
-  "description":
-    "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
+  "description": "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
   "main": "./dist/bundle.js",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "build":
-      "npm-run-all clean build:options format cover build:lib build:storybook",
+    "build": "npm-run-all clean build:options format cover build:lib build:storybook",
     "build:lib": "rollup -c",
     "build:options": "./scripts/build-options.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
-    "changelog":
-      "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
+    "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
     "clean": "rimraf ./coverage/ ./docs/",
     "cover": "npm run test -- --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls --verbose",
@@ -29,8 +28,7 @@
     "url": "git://github.com/skratchdot/react-bootstrap-daterangepicker.git"
   },
   "bugs": {
-    "url":
-      "https://github.com/skratchdot/react-bootstrap-daterangepicker/issues"
+    "url": "https://github.com/skratchdot/react-bootstrap-daterangepicker/issues"
   },
   "license": "Apache-2.0",
   "peerDependencies": {
@@ -48,7 +46,7 @@
     "@storybook/react": "^3.3.12",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-jest": "^22.1.0",
+    "babel-jest": "^22.2.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -59,7 +57,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^22.1.4",
+    "jest": "^22.2.2",
     "jquery": "^3.3.1",
     "lolex": "^2.3.2",
     "moment": "^2.20.1",
@@ -70,7 +68,7 @@
     "react-dom": "^16.2.0",
     "regenerator-runtime": "^0.11.1",
     "rimraf": "^2.6.2",
-    "rollup": "^0.55.3",
+    "rollup": "^0.55.5",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-node-resolve": "^3.0.2",
     "wordwrap": "^1.0.0"

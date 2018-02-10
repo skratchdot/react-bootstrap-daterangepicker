@@ -35,41 +35,26 @@ export class DateRangePicker extends Component {
   }
   setOptionsFromProps(currentOptions) {
     var keys = Object.keys(currentOptions);
-    if (this.$picker) {
-      if (currentOptions) {
-        keys.forEach(key => {
-          if (key === 'startDate') {
-            this.$picker
-              .data('daterangepicker')
-              .setStartDate(currentOptions[key]);
-          } else if (key === 'endDate') {
-            this.$picker
-              .data('daterangepicker')
-              .setEndDate(currentOptions[key]);
-          } else if (key === 'locale') {
-            $.extend(
-              this.$picker.data('daterangepicker')[key],
-              currentOptions[key]
-            );
-          } else {
-            this.$picker.data('daterangepicker')[key] = currentOptions[key];
-          }
-        });
+    keys.forEach(key => {
+      if (key === 'startDate') {
+        this.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
+      } else if (key === 'endDate') {
+        this.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
+      } else {
+        this.$picker.data('daterangepicker')[key] = currentOptions[key];
       }
-    }
+    });
   }
   componentWillReceiveProps(nextProps) {
-    if (this.$picker) {
-      var currentOptions = this.getOptionsFromProps();
-      var nextOptions = this.getOptionsFromProps(nextProps);
-      var changedOptions = {};
-      this.options.forEach(option => {
-        if (currentOptions[option] !== nextOptions[option]) {
-          changedOptions[option] = nextOptions[option];
-        }
-      });
-      this.setOptionsFromProps(changedOptions);
-    }
+    var currentOptions = this.getOptionsFromProps();
+    var nextOptions = this.getOptionsFromProps(nextProps);
+    var changedOptions = {};
+    this.options.forEach(option => {
+      if (currentOptions[option] !== nextOptions[option]) {
+        changedOptions[option] = nextOptions[option];
+      }
+    });
+    this.setOptionsFromProps(changedOptions);
   }
   componentDidMount() {
     // initialize

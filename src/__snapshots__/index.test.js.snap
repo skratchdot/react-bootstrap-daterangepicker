@@ -1,5 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`set some props after initial render. locale is overwritten. 1`] = `
+Object {
+  "children": <button>
+    click me
+  </button>,
+  "containerClass": "react-bootstrap-daterangepicker-container",
+  "containerStyles": Object {
+    "display": "inline-block",
+  },
+  "locale": Object {
+    "applyLabel": "Apply",
+  },
+}
+`;
+
+exports[`set some props after initial render. locale is overwritten. 2`] = `
+Object {
+  "children": <button>
+    click me
+  </button>,
+  "containerClass": "react-bootstrap-daterangepicker-container",
+  "containerStyles": Object {
+    "display": "inline-block",
+  },
+  "endDate": "2018-11-02T08:09:10.000Z",
+  "locale": Object {
+    "format": "YYYY-MM-DD",
+  },
+  "showDropdowns": true,
+  "startDate": "2018-10-25T09:00:00.000Z",
+}
+`;
+
 exports[`show picker with onShow handler 1`] = `
 <body>
   <div

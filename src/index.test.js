@@ -182,3 +182,48 @@ test('change startDate after opening', async () => {
   expect($('td.active').text()).toEqual('25');
   wrapper.instance().$picker.click();
 });
+
+test('daterangepicker is destroyed during componentWillUnmount()', async () => {
+  expect($('.daterangepicker').length).toEqual(0);
+  const wrapper = mount(
+    <DateRangePicker>
+      <button>click me</button>
+    </DateRangePicker>
+  );
+  expect($('.daterangepicker').length).toEqual(1);
+  wrapper.unmount();
+  expect($('.daterangepicker').length).toEqual(0);
+});
+
+test('unmount when internal ref is gone', async () => {
+  expect($('.daterangepicker').length).toEqual(0);
+  const wrapper = mount(
+    <DateRangePicker>
+      <button>click me</button>
+    </DateRangePicker>
+  );
+  expect($('.daterangepicker').length).toEqual(1);
+  const inst = wrapper.instance();
+  inst.$picker = null;
+  wrapper.unmount();
+  expect($('.daterangepicker').length).toEqual(1);
+});
+
+test('set some props after initial render. locale is overwritten.', async () => {
+  const propsAfterRender = {
+    startDate: moment('2018-10-25T09:00:00.000Z'),
+    endDate: moment('2018-11-02T08:09:10.000Z'),
+    locale: {
+      format: 'YYYY-MM-DD'
+    },
+    showDropdowns: true
+  };
+  const wrapper = mount(
+    <DateRangePicker locale={{ applyLabel: 'Apply' }}>
+      <button>click me</button>
+    </DateRangePicker>
+  );
+  expect(wrapper.props()).toMatchSnapshot();
+  wrapper.setProps(propsAfterRender);
+  expect(wrapper.props()).toMatchSnapshot();
+});

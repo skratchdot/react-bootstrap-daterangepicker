@@ -5,10 +5,8 @@ import lolex from 'lolex';
 import moment from 'moment';
 import $ from 'jquery';
 
-let clock;
-
 beforeEach(() => {
-  clock = lolex.install({ now: new Date('2018/01/15 09:15:30') });
+  lolex.install({ now: new Date('2018/01/15 09:15:30') });
   document.body.innerHTML = '';
 });
 

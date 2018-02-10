@@ -214,6 +214,7 @@ DateRangePicker.propTypes = {
   autoUpdateInput: PropTypes.bool,
   buttonClasses: PropTypes.array,
   cancelClass: PropTypes.string,
+  children: PropTypes.node.isRequired,
   containerClass: PropTypes.string,
   containerStyles: PropTypes.object,
   dateLimit: PropTypes.object,

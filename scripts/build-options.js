@@ -36,7 +36,7 @@ const buildOptions = () => {
   );
   // fix options that contain html strings
   const readmeOptions = options.map(function(option) {
-    return option.replace(/\</gi, '&lt;').replace(/\>/gi, '&gt;');
+    return option.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
   });
   // update README.md
   var before = 'You can pass all the same props as the original plugin:',
@@ -67,7 +67,7 @@ const printMissingOptions = includedOptions => {
       return item
         .split('.')[1]
         .split('[')[0]
-        .replace(/[^a-zA-Z0-9\<\>]/gi, '');
+        .replace(/[^a-zA-Z0-9<>]/gi, '');
     });
   const missingOptions = dateRangeOptions
     .filter((item, index) => {
@@ -77,6 +77,7 @@ const printMissingOptions = includedOptions => {
     .filter(item => {
       return includedOptions.indexOf(item) === -1;
     });
+  // eslint-disable-next-line
   console.log(missingOptions);
 };
 

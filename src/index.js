@@ -72,17 +72,6 @@ export class DateRangePicker extends Component {
     }
   }
   componentDidMount() {
-    this.initializeDateRangePicker();
-  }
-  componentWillUnmount() {
-    this.removeDateRangePicker();
-  }
-  removeDateRangePicker() {
-    if (this.$picker && this.$picker.data('daterangepicker')) {
-      this.$picker.data('daterangepicker').remove();
-    }
-  }
-  initializeDateRangePicker() {
     // initialize
     this.$picker.daterangepicker(this.getOptionsFromProps());
     // attach event listeners
@@ -95,6 +84,11 @@ export class DateRangePicker extends Component {
         );
       }
     );
+  }
+  componentWillUnmount() {
+    if (this.$picker && this.$picker.data('daterangepicker')) {
+      this.$picker.data('daterangepicker').remove();
+    }
   }
   render() {
     const { children, containerStyles, containerClass } = this.props;

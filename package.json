@@ -19,7 +19,7 @@
     "format": "prettier --write --single-quote '**/*.{js,md}'",
     "lint": "eslint .",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest",
+    "test": "TZ=America/New_York jest",
     "watch": "npm-run-all --parallel watch:cover storybook",
     "watch:cover": "npm run cover -- --watch"
   },

@@ -130,57 +130,32 @@ var DateRangePicker = function (_Component) {
       var _this3 = this;
 
       var keys = Object.keys(currentOptions);
-      if (this.$picker) {
-        if (currentOptions) {
-          keys.forEach(function (key) {
-            if (key === 'startDate') {
-              _this3.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
-            } else if (key === 'endDate') {
-              _this3.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
-            } else if (key === 'locale') {
-              $.extend(_this3.$picker.data('daterangepicker')[key], currentOptions[key]);
-            } else {
-              _this3.$picker.data('daterangepicker')[key] = currentOptions[key];
-            }
-          });
+      keys.forEach(function (key) {
+        if (key === 'startDate') {
+          _this3.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
+        } else if (key === 'endDate') {
+          _this3.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
+        } else {
+          _this3.$picker.data('daterangepicker')[key] = currentOptions[key];
         }
-      }
+      });
     }
   }, {
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      if (this.$picker) {
-        var currentOptions = this.getOptionsFromProps();
-        var nextOptions = this.getOptionsFromProps(nextProps);
-        var changedOptions = {};
-        this.options.forEach(function (option) {
-          if (currentOptions[option] !== nextOptions[option]) {
-            changedOptions[option] = nextOptions[option];
-          }
-        });
-        this.setOptionsFromProps(changedOptions);
-      }
+      var currentOptions = this.getOptionsFromProps();
+      var nextOptions = this.getOptionsFromProps(nextProps);
+      var changedOptions = {};
+      this.options.forEach(function (option) {
+        if (currentOptions[option] !== nextOptions[option]) {
+          changedOptions[option] = nextOptions[option];
+        }
+      });
+      this.setOptionsFromProps(changedOptions);
     }
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      this.initializeDateRangePicker();
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.removeDateRangePicker();
-    }
-  }, {
-    key: 'removeDateRangePicker',
-    value: function removeDateRangePicker() {
-      if (this.$picker && this.$picker.data('daterangepicker')) {
-        this.$picker.data('daterangepicker').remove();
-      }
-    }
-  }, {
-    key: 'initializeDateRangePicker',
-    value: function initializeDateRangePicker() {
       var _this4 = this;
 
       // initialize
@@ -190,6 +165,13 @@ var DateRangePicker = function (_Component) {
         var lcase = event.toLowerCase();
         _this4.$picker.on(lcase + '.daterangepicker', _this4.makeEventHandler('on' + event));
       });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.$picker && this.$picker.data('daterangepicker')) {
+        this.$picker.data('daterangepicker').remove();
+      }
     }
   }, {
     key: 'render',

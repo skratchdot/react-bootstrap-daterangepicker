@@ -158,7 +158,7 @@ test('picker with all event handlers', async () => {
 });
 
 test('change startDate after opening', async () => {
-  let startDate = moment('2018-02-15T09:00:00.000Z');
+  const startDate = moment('2018-02-15T09:00:00.000Z');
   expect($('td.active').length).toEqual(0);
   const wrapper = mount(
     <DateRangePicker startDate={startDate} singleDatePicker>

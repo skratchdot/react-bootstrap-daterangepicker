@@ -96,48 +96,16 @@ var DateRangePicker = function (_Component) {
   }
 
   createClass(DateRangePicker, [{
-    key: 'makeEventHandler',
-    value: function makeEventHandler(eventType) {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       var _this2 = this;
 
-      var onEvent = this.props.onEvent;
-
-      return function (event, picker) {
-        if (typeof onEvent === 'function') {
-          onEvent(event, picker);
-        }
-        if (typeof _this2.props[eventType] === 'function') {
-          _this2.props[eventType](event, picker);
-        }
-      };
-    }
-  }, {
-    key: 'getOptionsFromProps',
-    value: function getOptionsFromProps(props) {
-      var options;
-      props = props || this.props;
-      this.options.forEach(function (option) {
-        if (props.hasOwnProperty(option)) {
-          options = options || {};
-          options[option] = props[option];
-        }
-      });
-      return options || {};
-    }
-  }, {
-    key: 'setOptionsFromProps',
-    value: function setOptionsFromProps(currentOptions) {
-      var _this3 = this;
-
-      var keys = Object.keys(currentOptions);
-      keys.forEach(function (key) {
-        if (key === 'startDate') {
-          _this3.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
-        } else if (key === 'endDate') {
-          _this3.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
-        } else {
-          _this3.$picker.data('daterangepicker')[key] = currentOptions[key];
-        }
+      // initialize
+      this.$picker.daterangepicker(this.getOptionsFromProps());
+      // attach event listeners
+      ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
+        var lcase = event.toLowerCase();
+        _this2.$picker.on(lcase + '.daterangepicker', _this2.makeEventHandler('on' + event));
       });
     }
   }, {
@@ -154,24 +122,56 @@ var DateRangePicker = function (_Component) {
       this.setOptionsFromProps(changedOptions);
     }
   }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this4 = this;
-
-      // initialize
-      this.$picker.daterangepicker(this.getOptionsFromProps());
-      // attach event listeners
-      ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
-        var lcase = event.toLowerCase();
-        _this4.$picker.on(lcase + '.daterangepicker', _this4.makeEventHandler('on' + event));
-      });
-    }
-  }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       if (this.$picker && this.$picker.data('daterangepicker')) {
         this.$picker.data('daterangepicker').remove();
       }
+    }
+  }, {
+    key: 'makeEventHandler',
+    value: function makeEventHandler(eventType) {
+      var _this3 = this;
+
+      var onEvent = this.props.onEvent;
+
+      return function (event, picker) {
+        if (typeof onEvent === 'function') {
+          onEvent(event, picker);
+        }
+        if (typeof _this3.props[eventType] === 'function') {
+          _this3.props[eventType](event, picker);
+        }
+      };
+    }
+  }, {
+    key: 'getOptionsFromProps',
+    value: function getOptionsFromProps(props) {
+      var options = void 0;
+      props = props || this.props;
+      this.options.forEach(function (option) {
+        if (props.hasOwnProperty(option)) {
+          options = options || {};
+          options[option] = props[option];
+        }
+      });
+      return options || {};
+    }
+  }, {
+    key: 'setOptionsFromProps',
+    value: function setOptionsFromProps(currentOptions) {
+      var _this4 = this;
+
+      var keys = Object.keys(currentOptions);
+      keys.forEach(function (key) {
+        if (key === 'startDate') {
+          _this4.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
+        } else if (key === 'endDate') {
+          _this4.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
+        } else {
+          _this4.$picker.data('daterangepicker')[key] = currentOptions[key];
+        }
+      });
     }
   }, {
     key: 'render',

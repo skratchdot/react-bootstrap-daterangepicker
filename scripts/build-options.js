@@ -7,8 +7,8 @@ const buildOptions = () => {
   const body = fs.readFileSync(
     `${__dirname}/../node_modules/bootstrap-daterangepicker/website/index.html`
   );
-  var $ = cheerio.load(body);
-  var options = $('#options ul li code')
+  const $ = cheerio.load(body);
+  let options = $('#options ul li code')
     .map(function() {
       return $(this)
         .text()
@@ -39,21 +39,21 @@ const buildOptions = () => {
     return option.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
   });
   // update README.md
-  var before = 'You can pass all the same props as the original plugin:',
-    after = 'You can listen to the following 7 events:',
-    readme = fs.readFileSync('./README.md').toString(),
-    newReadme =
-      readme.slice(0, readme.indexOf(before) + before.length) +
-      '\n\n- **' +
-      wrap(readmeOptions.join(', ')).slice(2) +
-      '**\n\n' +
-      readme.slice(readme.indexOf(after));
+  const before = 'You can pass all the same props as the original plugin:';
+  const after = 'You can listen to the following 7 events:';
+  const readme = fs.readFileSync('./README.md').toString();
+  const newReadme =
+    readme.slice(0, readme.indexOf(before) + before.length) +
+    '\n\n- **' +
+    wrap(readmeOptions.join(', ')).slice(2) +
+    '**\n\n' +
+    readme.slice(readme.indexOf(after));
   fs.writeFileSync('./README.md', newReadme, 'utf-8');
   return options;
 };
 
 const printMissingOptions = includedOptions => {
-  var dateRangeOptions = fs
+  const dateRangeOptions = fs
     .readFileSync(
       `${__dirname}/../node_modules/bootstrap-daterangepicker/daterangepicker.js`,
       'utf-8'

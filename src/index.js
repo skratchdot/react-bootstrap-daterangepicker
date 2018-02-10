@@ -11,6 +11,36 @@ export class DateRangePicker extends Component {
     this.$picker = null;
     this.options = getOptions();
   }
+  componentDidMount() {
+    // initialize
+    this.$picker.daterangepicker(this.getOptionsFromProps());
+    // attach event listeners
+    ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
+      event => {
+        const lcase = event.toLowerCase();
+        this.$picker.on(
+          lcase + '.daterangepicker',
+          this.makeEventHandler('on' + event)
+        );
+      }
+    );
+  }
+  componentWillReceiveProps(nextProps) {
+    const currentOptions = this.getOptionsFromProps();
+    const nextOptions = this.getOptionsFromProps(nextProps);
+    const changedOptions = {};
+    this.options.forEach(option => {
+      if (currentOptions[option] !== nextOptions[option]) {
+        changedOptions[option] = nextOptions[option];
+      }
+    });
+    this.setOptionsFromProps(changedOptions);
+  }
+  componentWillUnmount() {
+    if (this.$picker && this.$picker.data('daterangepicker')) {
+      this.$picker.data('daterangepicker').remove();
+    }
+  }
   makeEventHandler(eventType) {
     const { onEvent } = this.props;
     return (event, picker) => {
@@ -23,7 +53,7 @@ export class DateRangePicker extends Component {
     };
   }
   getOptionsFromProps(props) {
-    var options;
+    let options;
     props = props || this.props;
     this.options.forEach(option => {
       if (props.hasOwnProperty(option)) {
@@ -34,7 +64,7 @@ export class DateRangePicker extends Component {
     return options || {};
   }
   setOptionsFromProps(currentOptions) {
-    var keys = Object.keys(currentOptions);
+    const keys = Object.keys(currentOptions);
     keys.forEach(key => {
       if (key === 'startDate') {
         this.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
@@ -44,36 +74,6 @@ export class DateRangePicker extends Component {
         this.$picker.data('daterangepicker')[key] = currentOptions[key];
       }
     });
-  }
-  componentWillReceiveProps(nextProps) {
-    var currentOptions = this.getOptionsFromProps();
-    var nextOptions = this.getOptionsFromProps(nextProps);
-    var changedOptions = {};
-    this.options.forEach(option => {
-      if (currentOptions[option] !== nextOptions[option]) {
-        changedOptions[option] = nextOptions[option];
-      }
-    });
-    this.setOptionsFromProps(changedOptions);
-  }
-  componentDidMount() {
-    // initialize
-    this.$picker.daterangepicker(this.getOptionsFromProps());
-    // attach event listeners
-    ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
-      event => {
-        var lcase = event.toLowerCase();
-        this.$picker.on(
-          lcase + '.daterangepicker',
-          this.makeEventHandler('on' + event)
-        );
-      }
-    );
-  }
-  componentWillUnmount() {
-    if (this.$picker && this.$picker.data('daterangepicker')) {
-      this.$picker.data('daterangepicker').remove();
-    }
   }
   render() {
     const { children, containerStyles, containerClass } = this.props;

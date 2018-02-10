@@ -15,5 +15,12 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'jsx-a11y'],
-  rules: {}
+  rules: {
+    indent: ['error', 2],
+    'no-var': 'error',
+    'one-var': ['error', 'never'],
+    'prefer-const': 'error',
+    'react/sort-comp': 'error',
+    quotes: ['error', 'single']
+  }
 };

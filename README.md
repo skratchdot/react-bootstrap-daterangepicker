@@ -118,6 +118,13 @@ Release notes can be found in the
 * [Live Demo](http://projects.skratchdot.com/react-bootstrap-daterangepicker/)
 * [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
 
+## Other React Date Pickers
+
+* [react-dates](https://github.com/airbnb/react-dates)
+* [react-datepicker](https://github.com/Hacker0x01/react-datepicker)
+
+**NOTE: Please submit a PR if there are other date pickers you can recommend**
+
 ## License
 
 Copyright (c) 2014 skratchdot  

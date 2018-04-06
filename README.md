@@ -120,6 +120,7 @@ Release notes can be found in the
 
 ## Other React Date Pickers
 
+* [react-date-range](https://github.com/Adphorus/react-date-range)
 * [react-dates](https://github.com/airbnb/react-dates)
 * [react-datepicker](https://github.com/Hacker0x01/react-datepicker)
 

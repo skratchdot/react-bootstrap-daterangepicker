@@ -17,6 +17,7 @@ const buildOptions = () => {
     .get();
   // add options that aren't documented
   options.push('template');
+  options.push('maxSpan');
   // de-dupe and sort
   options = options
     .filter(function(item, index) {

@@ -17,6 +17,7 @@ export default () => {
     'linkedCalendars',
     'locale',
     'maxDate',
+    'maxSpan',
     'minDate',
     'opens',
     'parentEl',

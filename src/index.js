@@ -25,7 +25,12 @@ export class DateRangePicker extends Component {
       }
     );
   }
-  componentWillReceiveProps(nextProps) {
+  componentWillUnmount() {
+    if (this.$picker && this.$picker.data('daterangepicker')) {
+      this.$picker.data('daterangepicker').remove();
+    }
+  }
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const currentOptions = this.getOptionsFromProps();
     const nextOptions = this.getOptionsFromProps(nextProps);
     const changedOptions = {};
@@ -35,11 +40,6 @@ export class DateRangePicker extends Component {
       }
     });
     this.setOptionsFromProps(changedOptions);
-  }
-  componentWillUnmount() {
-    if (this.$picker && this.$picker.data('daterangepicker')) {
-      this.$picker.data('daterangepicker').remove();
-    }
   }
   makeEventHandler(eventType) {
     const { onEvent } = this.props;

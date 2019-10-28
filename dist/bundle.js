@@ -91,8 +91,15 @@ var DateRangePicker = function (_Component) {
       });
     }
   }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      if (this.$picker && this.$picker.data('daterangepicker')) {
+        this.$picker.data('daterangepicker').remove();
+      }
+    }
+  }, {
+    key: 'UNSAFE_componentWillReceiveProps',
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       var currentOptions = this.getOptionsFromProps();
       var nextOptions = this.getOptionsFromProps(nextProps);
       var changedOptions = {};
@@ -102,13 +109,6 @@ var DateRangePicker = function (_Component) {
         }
       });
       this.setOptionsFromProps(changedOptions);
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.$picker && this.$picker.data('daterangepicker')) {
-        this.$picker.data('daterangepicker').remove();
-      }
     }
   }, {
     key: 'makeEventHandler',

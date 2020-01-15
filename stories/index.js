@@ -77,4 +77,48 @@ storiesOf('DateRangePicker', module)
         <button>{buttonLabel}</button>
       </DateRangePicker>
     );
+  })
+  .add('PropsUpdate', () => {
+    class StoryComp extends React.Component {
+      constructor( props ){
+        super(props);
+        this.state = {
+          ranges: {
+            'ics': [moment('2020-01-02T10:14:33Z'), moment('2020-30-02T10:14:33Z')]
+          },
+        }
+
+        this.onValueChange = this.onValueChange.bind(this);
+      }
+      onValueChange () {
+        setTimeout( () => {
+          this.setState({
+            ranges: {
+              'Electronics': [moment('2020-01-02T10:14:33Z'), moment('2020-30-02T10:14:33Z')]
+            }
+          })
+        }, 1000);
+      }
+      render () {
+        const buttonLabel = text('label', 'click to open');
+        return ( 
+          <div>
+            <DateRangePicker
+              onApply={action('onApply')}
+              onCancel={action('onCancel')}
+              onEvent={action('onEvent')}
+              onHide={action('onHide')}
+              onHideCalendar={action('onHideCalendar')}
+              onShow={action('onShow')}
+              onShowCalendar={action('onShowCalendar')}
+              ranges={this.state.ranges}
+            >
+              <button>{buttonLabel}</button>
+            </DateRangePicker>
+            <button onClick={this.onValueChange}>Change State</button>
+          </div>
+        );
+      }
+    }
+    return <StoryComp />
   });

@@ -25,7 +25,7 @@ export class DateRangePicker extends Component {
       }
     );
   }
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const currentOptions = this.getOptionsFromProps();
     const nextOptions = this.getOptionsFromProps(nextProps);
     const changedOptions = {};

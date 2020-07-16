@@ -36,34 +36,15 @@ Object {
 exports[`show picker with onShow handler 1`] = `
 <body>
   <div
-    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+    class="daterangepicker ltr show-calendar opensright"
     style="top: 0px; left: 0px;"
   >
     <div
-      class="calendar left"
+      class="ranges"
+    />
+    <div
+      class="drp-calendar left"
     >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control active"
-          name="daterangepicker_start"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
       <div
         class="calendar-table"
       >
@@ -75,9 +56,7 @@ exports[`show picker with onShow handler 1`] = `
               <th
                 class="prev available"
               >
-                <i
-                  class="fa fa-chevron-left glyphicon glyphicon-chevron-left"
-                />
+                <span />
               </th>
               <th
                 class="month"
@@ -379,32 +358,14 @@ exports[`show picker with onShow handler 1`] = `
           </tbody>
         </table>
       </div>
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
     </div>
     <div
-      class="calendar right"
+      class="drp-calendar right"
     >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_end"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
       <div
         class="calendar-table"
       >
@@ -423,9 +384,7 @@ exports[`show picker with onShow handler 1`] = `
               <th
                 class="next available"
               >
-                <i
-                  class="fa fa-chevron-right glyphicon glyphicon-chevron-right"
-                />
+                <span />
               </th>
             </tr>
             <tr>
@@ -720,27 +679,32 @@ exports[`show picker with onShow handler 1`] = `
           </tbody>
         </table>
       </div>
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
     </div>
     <div
-      class="ranges"
+      class="drp-buttons"
     >
-      <div
-        class="range_inputs"
+      <span
+        class="drp-selected"
       >
-        <button
-          class="applyBtn btn btn-sm btn-success"
-          type="button"
-        >
-          Apply
-        </button>
-         
-        <button
-          class="cancelBtn btn btn-sm btn-default"
-          type="button"
-        >
-          Cancel
-        </button>
-      </div>
+        01/15/2018 - 01/15/2018
+      </span>
+      <button
+        class="cancelBtn btn btn-sm btn-default"
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        class="applyBtn btn btn-sm btn-primary"
+        type="button"
+      >
+        Apply
+      </button>
+       
     </div>
   </div>
 </body>
@@ -751,87 +715,53 @@ exports[`simple picker with 1 child 1`] = `"<div class=\\"react-bootstrap-datera
 exports[`simple picker with 1 child 2`] = `
 <body>
   <div
-    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+    class="daterangepicker ltr show-calendar opensright"
   >
     <div
-      class="calendar left"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_start"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
-      class="calendar right"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_end"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
       class="ranges"
+    />
+    <div
+      class="drp-calendar left"
     >
       <div
-        class="range_inputs"
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-calendar right"
+    >
+      <div
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-buttons"
+    >
+      <span
+        class="drp-selected"
+      />
+      <button
+        class="cancelBtn btn btn-sm btn-default"
+        type="button"
       >
-        <button
-          class="applyBtn btn btn-sm btn-success"
-          disabled="disabled"
-          type="button"
-        >
-          Apply
-        </button>
-         
-        <button
-          class="cancelBtn btn btn-sm btn-default"
-          type="button"
-        >
-          Cancel
-        </button>
-      </div>
+        Cancel
+      </button>
+      <button
+        class="applyBtn btn btn-sm btn-primary"
+        disabled="disabled"
+        type="button"
+      >
+        Apply
+      </button>
+       
     </div>
   </div>
 </body>
@@ -842,87 +772,53 @@ exports[`simple picker with multiple children is wrapped in div 1`] = `"<div cla
 exports[`simple picker with multiple children is wrapped in div 2`] = `
 <body>
   <div
-    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+    class="daterangepicker ltr show-calendar opensright"
   >
     <div
-      class="calendar left"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_start"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
-      class="calendar right"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_end"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
       class="ranges"
+    />
+    <div
+      class="drp-calendar left"
     >
       <div
-        class="range_inputs"
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-calendar right"
+    >
+      <div
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-buttons"
+    >
+      <span
+        class="drp-selected"
+      />
+      <button
+        class="cancelBtn btn btn-sm btn-default"
+        type="button"
       >
-        <button
-          class="applyBtn btn btn-sm btn-success"
-          disabled="disabled"
-          type="button"
-        >
-          Apply
-        </button>
-         
-        <button
-          class="cancelBtn btn btn-sm btn-default"
-          type="button"
-        >
-          Cancel
-        </button>
-      </div>
+        Cancel
+      </button>
+      <button
+        class="applyBtn btn btn-sm btn-primary"
+        disabled="disabled"
+        type="button"
+      >
+        Apply
+      </button>
+       
     </div>
   </div>
 </body>
@@ -933,87 +829,53 @@ exports[`simple picker with text child is wrapped in div 1`] = `"<div class=\\"r
 exports[`simple picker with text child is wrapped in div 2`] = `
 <body>
   <div
-    class="daterangepicker dropdown-menu ltr show-calendar opensright"
+    class="daterangepicker ltr show-calendar opensright"
   >
     <div
-      class="calendar left"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_start"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
-      class="calendar right"
-    >
-      <div
-        class="daterangepicker_input"
-      >
-        <input
-          class="input-mini form-control"
-          name="daterangepicker_end"
-          type="text"
-          value=""
-        />
-        <i
-          class="fa fa-calendar glyphicon glyphicon-calendar"
-        />
-        <div
-          class="calendar-time"
-          style="display: none;"
-        >
-          <div />
-          <i
-            class="fa fa-clock-o glyphicon glyphicon-time"
-          />
-        </div>
-      </div>
-      <div
-        class="calendar-table"
-      />
-    </div>
-    <div
       class="ranges"
+    />
+    <div
+      class="drp-calendar left"
     >
       <div
-        class="range_inputs"
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-calendar right"
+    >
+      <div
+        class="calendar-table"
+      />
+      <div
+        class="calendar-time"
+        style="display: none;"
+      />
+    </div>
+    <div
+      class="drp-buttons"
+    >
+      <span
+        class="drp-selected"
+      />
+      <button
+        class="cancelBtn btn btn-sm btn-default"
+        type="button"
       >
-        <button
-          class="applyBtn btn btn-sm btn-success"
-          disabled="disabled"
-          type="button"
-        >
-          Apply
-        </button>
-         
-        <button
-          class="cancelBtn btn btn-sm btn-default"
-          type="button"
-        >
-          Cancel
-        </button>
-      </div>
+        Cancel
+      </button>
+      <button
+        class="applyBtn btn btn-sm btn-primary"
+        disabled="disabled"
+        type="button"
+      >
+        Apply
+      </button>
+       
     </div>
   </div>
 </body>

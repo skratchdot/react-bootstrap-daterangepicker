@@ -96,10 +96,10 @@ test('picker with all event handlers', async () => {
 
   // click 2 dates
   $(document.body)
-    .find('.calendar.left [data-title="r2c3"]')
+    .find('.drp-calendar.left [data-title="r2c3"]')
     .mousedown();
   $(document.body)
-    .find('.calendar.right [data-title="r2c3"]')
+    .find('.drp-calendar.right [data-title="r2c3"]')
     .mousedown();
 
   // cancel picker
@@ -132,10 +132,10 @@ test('picker with all event handlers', async () => {
 
   // click 2 dates
   $(document.body)
-    .find('.calendar.left [data-title="r2c3"]')
+    .find('.drp-calendar.left [data-title="r2c3"]')
     .mousedown();
   $(document.body)
-    .find('.calendar.right [data-title="r2c3"]')
+    .find('.drp-calendar.right [data-title="r2c3"]')
     .mousedown();
 
   // apply picker

@@ -14,7 +14,7 @@
     "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
     "clean": "rimraf ./coverage/ ./docs/",
     "cover": "npm run test -- --coverage",
-    "coveralls": "cat coverage/lcov.info | coveralls --verbose",
+    "coveralls": "cat coverage/lcov.info | coveralls --verbose || exit 0",
     "format": "prettier --write --single-quote '**/*.{js,md}'",
     "lint": "eslint .",
     "storybook": "start-storybook -p 9001 -c .storybook",

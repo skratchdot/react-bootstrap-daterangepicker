@@ -3,16 +3,16 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
-    node: true
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
   ],
   parser: 'babel-eslint',
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', 'jsx-a11y'],
   rules: {
@@ -21,6 +21,6 @@ module.exports = {
     'one-var': ['error', 'never'],
     'prefer-const': 'error',
     'react/sort-comp': 'error',
-    quotes: ['error', 'single']
-  }
+    quotes: ['error', 'single'],
+  },
 };

@@ -59,22 +59,23 @@ For in depth documentation, see the original
 
 You can pass all the same props as the original plugin:
 
-* **&lt;input&gt;, alwaysShowCalendars, applyClass, autoApply, autoUpdateInput,
-  buttonClasses, cancelClass, dateLimit, drops, endDate, isCustomDate,
-  isInvalidDate, linkedCalendars, locale, maxDate, minDate, opens, parentEl,
+- **&lt;input&gt;, alwaysShowCalendars, applyButtonClasses, applyClass,
+  autoApply, autoUpdateInput, buttonClasses, cancelButtonClasses, cancelClass,
+  dateLimit, drops, endDate, isCustomDate, isInvalidDate, linkedCalendars,
+  locale, maxDate, maxSpan, maxYear, minDate, minYear, moment, opens, parentEl,
   ranges, showCustomRangeLabel, showDropdowns, showISOWeekNumbers,
   showWeekNumbers, singleDatePicker, startDate, template, timePicker,
   timePicker24Hour, timePickerIncrement, timePickerSeconds**
 
 You can listen to the following 7 events:
 
-* **onShow**: thrown when the widget is shown
-* **onHide**: thrown when the widget is hidden
-* **onShowCalendar**: thrown when the calendar is shown
-* **onHideCalendar**: thrown when the calendar is hidden
-* **onApply**: thrown when the apply button is clicked
-* **onCancel**: thrown when the cancel button is clicked
-* **onEvent**: thrown when any of the 4 events above are triggered
+- **onShow**: thrown when the widget is shown
+- **onHide**: thrown when the widget is hidden
+- **onShowCalendar**: thrown when the calendar is shown
+- **onHideCalendar**: thrown when the calendar is hidden
+- **onApply**: thrown when the apply button is clicked
+- **onCancel**: thrown when the cancel button is clicked
+- **onEvent**: thrown when any of the 4 events above are triggered
 
 All 7 of the events above should take a handler that is passed 2 arguments: **event** and **picker**
 
@@ -98,13 +99,16 @@ Every `<DateRangePicker />` element emits a div element for the wrapper project 
 The emitted div looks like this by default:
 
 ```html
-<div class="react-bootstrap-daterangepicker-container" style="display:inline-block"></div>
+<div
+  class="react-bootstrap-daterangepicker-container"
+  style="display:inline-block"
+></div>
 ```
 
 The 2 props you can pass to modify this behavior are:
 
-* **containerStyles [object]**: the styles of the container `<div />` (default: `{ display: 'inline-block' }`)
-* **containerClass [string]**: the class of the container `<div />` (default: `'react-bootstrap-daterangepicker-container'`)
+- **containerStyles [object]**: the styles of the container `<div />` (default: `{ display: 'inline-block' }`)
+- **containerClass [string]**: the class of the container `<div />` (default: `'react-bootstrap-daterangepicker-container'`)
 
 ## Release Notes
 
@@ -113,16 +117,16 @@ Release notes can be found in the
 
 ## Links
 
-* [Source Code](https://github.com/skratchdot/react-bootstrap-daterangepicker)
-* [Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/blob/master/CHANGELOG.md)
-* [Live Demo](http://projects.skratchdot.com/react-bootstrap-daterangepicker/)
-* [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
+- [Source Code](https://github.com/skratchdot/react-bootstrap-daterangepicker)
+- [Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/blob/master/CHANGELOG.md)
+- [Live Demo](http://projects.skratchdot.com/react-bootstrap-daterangepicker/)
+- [Original Plugin](https://github.com/dangrossman/bootstrap-daterangepicker)
 
 ## Other React Date Pickers
 
-* [react-date-range](https://github.com/Adphorus/react-date-range)
-* [react-dates](https://github.com/airbnb/react-dates)
-* [react-datepicker](https://github.com/Hacker0x01/react-datepicker)
+- [react-date-range](https://github.com/Adphorus/react-date-range)
+- [react-dates](https://github.com/airbnb/react-dates)
+- [react-datepicker](https://github.com/Hacker0x01/react-datepicker)
 
 **NOTE: Please submit a PR if there are other date pickers you can recommend**
 

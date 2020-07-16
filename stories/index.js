@@ -14,7 +14,7 @@ window.jQuery = window.$ = jQuery;
 
 storiesOf('DateRangePicker', module)
   .addDecorator((story, context) => withInfo()(story)(context))
-  .addDecorator(story => <div style={{ margin: 40 }}>{story()}</div>)
+  .addDecorator((story) => <div style={{ margin: 40 }}>{story()}</div>)
   .addDecorator(withKnobs)
   .add('simple', () => {
     const buttonLabel = text('label', 'click to open');
@@ -86,9 +86,9 @@ storiesOf('DateRangePicker', module)
           ranges: {
             ics: [
               moment('2020-01-02T10:14:33Z'),
-              moment('2020-30-02T10:14:33Z')
-            ]
-          }
+              moment('2020-30-02T10:14:33Z'),
+            ],
+          },
         };
 
         this.onValueChange = this.onValueChange.bind(this);
@@ -99,9 +99,9 @@ storiesOf('DateRangePicker', module)
             ranges: {
               Electronics: [
                 moment('2020-01-02T10:14:33Z'),
-                moment('2020-30-02T10:14:33Z')
-              ]
-            }
+                moment('2020-30-02T10:14:33Z'),
+              ],
+            },
           });
         }, 1000);
       }

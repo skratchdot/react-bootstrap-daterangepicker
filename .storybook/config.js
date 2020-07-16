@@ -11,13 +11,13 @@ function loadStories() {
 setDefaults({
   header: true,
   inline: true,
-  source: true
+  source: true,
 });
 
 setOptions({
   name: `${packageInfo.name} v${packageInfo.version}`,
   url: packageInfo.homepage,
-  addonPanelInRight: true
+  addonPanelInRight: true,
 });
 
 configure(loadStories, module);

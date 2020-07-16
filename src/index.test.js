@@ -95,17 +95,11 @@ test('picker with all event handlers', async () => {
   expect(onEvent).toHaveBeenCalledTimes(1);
 
   // click 2 dates
-  $(document.body)
-    .find('.drp-calendar.left [data-title="r2c3"]')
-    .mousedown();
-  $(document.body)
-    .find('.drp-calendar.right [data-title="r2c3"]')
-    .mousedown();
+  $(document.body).find('.drp-calendar.left [data-title="r2c3"]').mousedown();
+  $(document.body).find('.drp-calendar.right [data-title="r2c3"]').mousedown();
 
   // cancel picker
-  $(document.body)
-    .find('.cancelBtn')
-    .click();
+  $(document.body).find('.cancelBtn').click();
   expect(onShow).toHaveBeenCalledTimes(1);
   expect(onHide).toHaveBeenCalledTimes(1);
   expect(onShowCalendar).toHaveBeenCalledTimes(0);
@@ -131,17 +125,11 @@ test('picker with all event handlers', async () => {
   expect(onCancel.mock.calls[0][1].endDate.toISOString()).toEqual(d2);
 
   // click 2 dates
-  $(document.body)
-    .find('.drp-calendar.left [data-title="r2c3"]')
-    .mousedown();
-  $(document.body)
-    .find('.drp-calendar.right [data-title="r2c3"]')
-    .mousedown();
+  $(document.body).find('.drp-calendar.left [data-title="r2c3"]').mousedown();
+  $(document.body).find('.drp-calendar.right [data-title="r2c3"]').mousedown();
 
   // apply picker
-  $(document.body)
-    .find('.applyBtn')
-    .click();
+  $(document.body).find('.applyBtn').click();
   expect(onShow).toHaveBeenCalledTimes(2);
   expect(onHide).toHaveBeenCalledTimes(2);
   expect(onShowCalendar).toHaveBeenCalledTimes(0);
@@ -150,7 +138,7 @@ test('picker with all event handlers', async () => {
   expect(onCancel).toHaveBeenCalledTimes(1);
   expect(onEvent).toHaveBeenCalledTimes(6);
   const d3 = '2018-01-17T05:00:00.000Z';
-  const d4 = '2018-02-15T04:59:59.000Z';
+  const d4 = '2018-02-15T04:59:59.999Z';
   expect(onCancel.mock.calls[0][1].oldStartDate.toISOString()).toEqual(d1);
   expect(onCancel.mock.calls[0][1].startDate.toISOString()).toEqual(d3);
   expect(onCancel.mock.calls[0][1].oldEndDate.toISOString()).toEqual(d2);
@@ -212,9 +200,9 @@ test('set some props after initial render. locale is overwritten.', async () => 
     startDate: moment('2018-10-25T09:00:00.000Z'),
     endDate: moment('2018-11-02T08:09:10.000Z'),
     locale: {
-      format: 'YYYY-MM-DD'
+      format: 'YYYY-MM-DD',
     },
-    showDropdowns: true
+    showDropdowns: true,
   };
   const wrapper = mount(
     <DateRangePicker locale={{ applyLabel: 'Apply' }}>

@@ -16,7 +16,7 @@ export class DateRangePicker extends Component {
     this.$picker.daterangepicker(this.getOptionsFromProps());
     // attach event listeners
     ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
-      event => {
+      (event) => {
         const lcase = event.toLowerCase();
         this.$picker.on(
           lcase + '.daterangepicker',
@@ -29,7 +29,7 @@ export class DateRangePicker extends Component {
     const currentOptions = this.getOptionsFromProps();
     const nextOptions = this.getOptionsFromProps(nextProps);
     const changedOptions = {};
-    this.options.forEach(option => {
+    this.options.forEach((option) => {
       if (currentOptions[option] !== nextOptions[option]) {
         changedOptions[option] = nextOptions[option];
       }
@@ -55,8 +55,8 @@ export class DateRangePicker extends Component {
   getOptionsFromProps(props) {
     let options;
     props = props || this.props;
-    this.options.forEach(option => {
-      if (props.hasOwnProperty(option)) {
+    this.options.forEach((option) => {
+      if (Object.prototype.hasOwnProperty.call(props, option)) {
         options = options || {};
         options[option] = props[option];
       }
@@ -65,7 +65,7 @@ export class DateRangePicker extends Component {
   }
   setOptionsFromProps(currentOptions) {
     const keys = Object.keys(currentOptions);
-    keys.forEach(key => {
+    keys.forEach((key) => {
       if (key === 'startDate') {
         this.$picker.data('daterangepicker').setStartDate(currentOptions[key]);
       } else if (key === 'endDate') {
@@ -80,7 +80,7 @@ export class DateRangePicker extends Component {
     const { children, containerStyles, containerClass } = this.props;
     return (
       <div
-        ref={picker => {
+        ref={(picker) => {
           this.$picker = $(picker);
         }}
         className={containerClass}
@@ -95,8 +95,8 @@ export class DateRangePicker extends Component {
 DateRangePicker.defaultProps = {
   containerClass: 'react-bootstrap-daterangepicker-container',
   containerStyles: {
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };
 
 DateRangePicker.propTypes = {
@@ -139,7 +139,7 @@ DateRangePicker.propTypes = {
   timePicker: PropTypes.bool,
   timePickerIncrement: PropTypes.number,
   timePicker24Hour: PropTypes.bool,
-  timePickerSeconds: PropTypes.bool
+  timePickerSeconds: PropTypes.bool,
 };
 
 export default DateRangePicker;

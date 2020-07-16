@@ -93,7 +93,7 @@ exports[`show picker with onShow handler 1`] = `
           <tbody>
             <tr>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r0c0"
               >
                 31
@@ -293,19 +293,19 @@ exports[`show picker with onShow handler 1`] = `
                 31
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r4c4"
               >
                 1
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r4c5"
               >
                 2
               </td>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r4c6"
               >
                 3
@@ -313,43 +313,43 @@ exports[`show picker with onShow handler 1`] = `
             </tr>
             <tr>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r5c0"
               >
                 4
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c1"
               >
                 5
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c2"
               >
                 6
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c3"
               >
                 7
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c4"
               >
                 8
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c5"
               >
                 9
               </td>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r5c6"
               >
                 10
@@ -414,25 +414,25 @@ exports[`show picker with onShow handler 1`] = `
           <tbody>
             <tr>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r0c0"
               >
                 28
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r0c1"
               >
                 29
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r0c2"
               >
                 30
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r0c3"
               >
                 31
@@ -614,19 +614,19 @@ exports[`show picker with onShow handler 1`] = `
                 28
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r4c4"
               >
                 1
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r4c5"
               >
                 2
               </td>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r4c6"
               >
                 3
@@ -634,43 +634,43 @@ exports[`show picker with onShow handler 1`] = `
             </tr>
             <tr>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r5c0"
               >
                 4
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c1"
               >
                 5
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c2"
               >
                 6
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c3"
               >
                 7
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c4"
               >
                 8
               </td>
               <td
-                class="off available"
+                class="off ends available"
                 data-title="r5c5"
               >
                 9
               </td>
               <td
-                class="weekend off available"
+                class="weekend off ends available"
                 data-title="r5c6"
               >
                 10

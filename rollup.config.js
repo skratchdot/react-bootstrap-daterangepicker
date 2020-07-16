@@ -6,20 +6,19 @@ export default {
   output: {
     file: 'dist/bundle.js',
     format: 'cjs',
-    exports: 'named'
+    exports: 'named',
   },
   plugins: [
     resolve(),
     babel({
       exclude: 'node_modules/**',
-      plugins: ['external-helpers']
-    })
+    }),
   ],
   external: [
     'bootstrap-daterangepicker',
     'moment',
     'jquery',
     'react',
-    'prop-types'
-  ]
+    'prop-types',
+  ],
 };

@@ -17,6 +17,7 @@
     "coveralls": "cat coverage/lcov.info | coveralls --verbose || exit 0",
     "format": "prettier --write --single-quote '**/*.{js,md}'",
     "lint": "eslint .",
+    "start": "npm run watch",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "TZ=America/New_York jest",
     "watch": "npm-run-all --parallel watch:cover storybook",

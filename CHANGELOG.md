@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.0.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/5.0.1) (2020-07-24)
+
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/5.0.0...5.0.1)
+
 ## [5.0.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/5.0.0) (2020-07-16)
 
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/4.1.0...5.0.0)
@@ -61,7 +65,6 @@
 
 - fix `isCustomDate` proptype [\#150](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/150) ([yashksagar](https://github.com/yashksagar))
 - add instruction to install peer dependencies in readme [\#135](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/135) ([barbalex](https://github.com/barbalex))
-- Setup the date range picker on the child element directly [\#79](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/79) ([remiremi](https://github.com/remiremi))
 
 ## [3.4.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.4.0) (2017-05-18)
 
@@ -72,6 +75,10 @@
 - Release [\#132](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/132)
 - Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead. [\#128](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/128)
 - React.createClass deprecated now. react-bootstrap-daterangepicker will be incompatible with React 16 [\#126](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/126)
+
+**Merged pull requests:**
+
+- Setup the date range picker on the child element directly [\#79](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/79) ([remiremi](https://github.com/remiremi))
 
 ## [3.3.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.3.0) (2017-05-18)
 
@@ -141,6 +148,7 @@
 **Merged pull requests:**
 
 - Add showCustomRangeLabel option [\#86](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/86) ([rmdort](https://github.com/rmdort))
+- Don't pass own props to the div [\#85](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/85) ([just-paja](https://github.com/just-paja))
 
 ## [3.1.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/3.1.0) (2016-06-01)
 
@@ -154,7 +162,6 @@
 
 **Merged pull requests:**
 
-- Don't pass own props to the div [\#85](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/85) ([just-paja](https://github.com/just-paja))
 - fix props overwriting locale [\#76](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/76) ([kibin](https://github.com/kibin))
 - Use setStart/EndDate\(\) when respective props change [\#74](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/74) ([drd](https://github.com/drd))
 - Only update options from props when props change [\#73](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/73) ([drd](https://github.com/drd))
@@ -296,7 +303,7 @@
 
 - Remove console.log statement in componentDidMount [\#24](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/24) ([justinsisley](https://github.com/justinsisley))
 - getOptionsFromProps should never return undefined [\#23](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/23) ([justinsisley](https://github.com/justinsisley))
-- Allow optionsFromProps to be passed at init [\#2](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/2) ([sbellity](https://github.com/sbellity))
+- allow react \>=0.13.0-beta.1 [\#10](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/10) ([mistadikay](https://github.com/mistadikay))
 
 ## [0.2.7](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.2.7) (2015-07-19)
 
@@ -336,10 +343,6 @@
 ## [0.2.3](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.2.3) (2015-03-04)
 
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/0.2.2...0.2.3)
-
-**Merged pull requests:**
-
-- allow react \>=0.13.0-beta.1 [\#10](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/10) ([mistadikay](https://github.com/mistadikay))
 
 ## [0.2.2](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.2.2) (2015-02-20)
 
@@ -397,6 +400,10 @@
 **Closed issues:**
 
 - daterangepicker does not render [\#1](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/1)
+
+**Merged pull requests:**
+
+- Allow optionsFromProps to be passed at init [\#2](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/2) ([sbellity](https://github.com/sbellity))
 
 ## [0.0.6](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.0.6) (2014-09-04)
 

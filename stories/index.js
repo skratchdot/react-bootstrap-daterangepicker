@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import jQuery from 'jquery';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs/react';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import DateRangePicker from '../src/index.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-daterangepicker/daterangepicker.css';
@@ -78,7 +78,79 @@ storiesOf('DateRangePicker', module)
       </DateRangePicker>
     );
   })
-  .add('PropsUpdate', () => {
+  .add('Change range data', () => {
+    const StoryComp = () => {
+      const openButtonLabel = text(
+        'open button label',
+        'click to open date range picker'
+      );
+      const changeButtonLabel = text(
+        'change button label',
+        'change range label'
+      );
+      const keyRef = useRef(Date.now());
+      const [dates, setDates] = useState({
+        startDate: moment('2020/03/01'),
+        endDate: moment('2020/03/15'),
+      });
+      const [ranges, setRanges] = useState({
+        ['First Range']: [
+          moment().subtract(2, 'days'),
+          moment().add(2, 'days'),
+        ],
+      });
+      const handleApply = (event, picker) => {
+        setDates({
+          startDate: picker.startDate,
+          endDate: picker.endDate,
+        });
+      };
+      const randomNumber = () => Math.floor(Math.random() * 20) + 1;
+      const handleChangeRanges = () => {
+        keyRef.current = Date.now();
+        setRanges({
+          [`Range ${Date.now()}`]: [
+            moment().subtract(randomNumber(), 'days').startOf('day'),
+            moment().add(randomNumber(), 'days').startOf('day'),
+          ],
+        });
+      };
+      return (
+        <div>
+          <DateRangePicker
+            key={keyRef.current}
+            onApply={handleApply}
+            onCancel={action('onCancel')}
+            onEvent={action('onEvent')}
+            onHide={action('onHide')}
+            onHideCalendar={action('onHideCalendar')}
+            onShow={action('onShow')}
+            onShowCalendar={action('onShowCalendar')}
+            ranges={ranges}
+          >
+            <button>{openButtonLabel}</button>
+          </DateRangePicker>
+          <br />
+          <h4>
+            startDate: <small>{dates.startDate.format()}</small>
+          </h4>
+          <h4>
+            endDate: <small>{dates.endDate.format()}</small>
+          </h4>
+          <h4>
+            ranges: <small>{JSON.stringify(ranges)}</small>
+          </h4>
+          <button onClick={handleChangeRanges}>{changeButtonLabel}</button>
+        </div>
+      );
+    };
+    return (
+      <div>
+        <StoryComp />
+      </div>
+    );
+
+    /*
     class StoryComp extends React.Component {
       constructor(props) {
         super(props);
@@ -121,10 +193,11 @@ storiesOf('DateRangePicker', module)
             >
               <button>{buttonLabel}</button>
             </DateRangePicker>
-            <button onClick={this.onValueChange}>Change State</button>
+            <button onClick={this.onValueChange}>Change ranges after 1 second</button>
           </div>
         );
       }
     }
     return <StoryComp />;
+    */
   });

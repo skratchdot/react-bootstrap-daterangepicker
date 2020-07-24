@@ -72,7 +72,6 @@ export class DateRangePicker extends Component {
         this.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
       } else {
         this.$picker.data('daterangepicker')[key] = currentOptions[key];
-        this.$picker.daterangepicker(this.$picker.data('daterangepicker'));
       }
     });
   }

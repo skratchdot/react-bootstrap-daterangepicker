@@ -209,8 +209,6 @@ var DateRangePicker = /*#__PURE__*/function (_Component) {
           _this4.$picker.data('daterangepicker').setEndDate(currentOptions[key]);
         } else {
           _this4.$picker.data('daterangepicker')[key] = currentOptions[key];
-
-          _this4.$picker.daterangepicker(_this4.$picker.data('daterangepicker'));
         }
       });
     }

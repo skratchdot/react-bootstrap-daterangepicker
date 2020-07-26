@@ -78,7 +78,8 @@ You can listen to the following 8 events:
 - **onEvent**: `callback(event, picker)` thrown when any of the 6 events above are triggered
 - **onCallback**: `callback(start, end, label)` thrown when the start/end dates change
 
-You MUST pass a single child element to the `<DateRangePicker />` component.
+You MUST pass a single child element to the `<DateRangePicker />` component- and it MUST be a DOM element.
+Passing custom react components is not currently supported b/c this lib needs a single dom node to initialize.
 
 NOTE: This component should be used as an [Uncontrolled Component](https://reactjs.org/docs/uncontrolled-components.html). If you try
 to control the value of your child `<input />`, the you will probably encounter issues.

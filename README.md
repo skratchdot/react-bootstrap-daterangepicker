@@ -44,7 +44,7 @@ import 'bootstrap-daterangepicker/daterangepicker.css';
 class MyComponent {
   render() {
     return (
-      <DateRangePicker startDate="1/1/2014" endDate="3/1/2014">
+      <DateRangePicker initialSettings={{ startDate: '1/1/2014', endDate: '3/1/2014' }}>
         <button>Click Me To Open Picker!</button>
       </DateRangePicker>
     );
@@ -88,14 +88,14 @@ Please view the storybook for an example of this.
 
 ### Examples
 
-For more usage examples, please view the storybook:
+For more usage examples, please view the storybook:  
 https://projects.skratchdot.com/react-bootstrap-daterangepicker/
 
 #### Simple button example
 
 ```javascript
 <DateRangePicker>
-  <button type="button" class="btn btn-primary">
+  <button type="button" className="btn btn-primary">
     click to open
   </button>
 </DateRangePicker>
@@ -105,7 +105,7 @@ https://projects.skratchdot.com/react-bootstrap-daterangepicker/
 
 ```javascript
 <DateRangePicker>
-  <input type="text" class="form-control" />
+  <input type="text" className="form-control" />
 </DateRangePicker>
 ```
 
@@ -115,7 +115,7 @@ https://projects.skratchdot.com/react-bootstrap-daterangepicker/
 <DateRangePicker
   initialSettings={{ startDate: '01/01/2020', endDate: '01/15/2020' }}
 >
-  <input type="text" class="form-control" />
+  <input type="text" className="form-control" />
 </DateRangePicker>
 ```
 

@@ -57,7 +57,7 @@ class MyComponent {
 For in depth documentation, see the original
 [bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker) project page.
 
-You can pass all the same props as the original plugin:
+You can pass all the settings from the original plugin to the `initialSettings` prop:
 
 - **&lt;input&gt;, alwaysShowCalendars, applyButtonClasses, applyClass,
   autoApply, autoUpdateInput, buttonClasses, cancelButtonClasses, cancelClass,
@@ -67,17 +67,57 @@ You can pass all the same props as the original plugin:
   showWeekNumbers, singleDatePicker, startDate, template, timePicker,
   timePicker24Hour, timePickerIncrement, timePickerSeconds**
 
-You can listen to the following 7 events:
+You can listen to the following 8 events:
 
-- **onShow**: thrown when the widget is shown
-- **onHide**: thrown when the widget is hidden
-- **onShowCalendar**: thrown when the calendar is shown
-- **onHideCalendar**: thrown when the calendar is hidden
-- **onApply**: thrown when the apply button is clicked
-- **onCancel**: thrown when the cancel button is clicked
-- **onEvent**: thrown when any of the 4 events above are triggered
+- **onShow**: `callback(event, picker)` thrown when the widget is shown
+- **onHide**: `callback(event, picker)` thrown when the widget is hidden
+- **onShowCalendar**: `callback(event, picker)` thrown when the calendar is shown
+- **onHideCalendar**: `callback(event, picker)` thrown when the calendar is hidden
+- **onApply**: `callback(event, picker)` thrown when the apply button is clicked
+- **onCancel**: `callback(event, picker)` thrown when the cancel button is clicked
+- **onEvent**: `callback(event, picker)` thrown when any of the 6 events above are triggered
+- **onCallback**: `callback(start, end, label)` thrown when the start/end dates change
 
-All 7 of the events above should take a handler that is passed 2 arguments: **event** and **picker**
+You MUST pass a single child element to the `<DateRangePicker />` component.
+
+NOTE: This component should be used as an [Uncontrolled Component](https://reactjs.org/docs/uncontrolled-components.html). If you try
+to control the value of your child `<input />`, the you will probably encounter issues.
+
+There are 2 methods from the upstream lib that can be called: `setStartDate` and `setEndDate`, but you need to use refs when doing so.
+Please view the storybook for an example of this.
+
+### Examples
+
+For more usage examples, please view the storybook:
+https://projects.skratchdot.com/react-bootstrap-daterangepicker/
+
+#### Simple button example
+
+```javascript
+<DateRangePicker>
+  <button type="button" class="btn btn-primary">
+    click to open
+  </button>
+</DateRangePicker>
+```
+
+#### Simple input example
+
+```javascript
+<DateRangePicker>
+  <input type="text" class="form-control" />
+</DateRangePicker>
+```
+
+#### Initialize with a startDate and endDate
+
+```javascript
+<DateRangePicker
+  initialSettings={{ startDate: '01/01/2020', endDate: '01/15/2020' }}
+>
+  <input type="text" class="form-control" />
+</DateRangePicker>
+```
 
 #### Example event handler:
 
@@ -86,29 +126,17 @@ class SomeReactComponent extends React.Component {
   handleEvent(event, picker) {
     console.log(picker.startDate);
   }
+  handleCallback(start, end, label) {
+    console.log(start, end, label);
+  }
   render() {
-    return <DateRangePicker onEvent={this.handleEvent} />;
+    return (
+      <DateRangePicker onEvent={this.handleEvent} onCallback={this.handleCallback}>
+        <input />
+      </DateRangePicker>;
   }
 }
 ```
-
-There are 2 additional props you can pass, that are not part of the wrapped
-[bootstrap-daterangepicker](https://github.com/dangrossman/bootstrap-daterangepicker) project.
-Every `<DateRangePicker />` element emits a div element for the wrapper project to initialize itself against.
-
-The emitted div looks like this by default:
-
-```html
-<div
-  class="react-bootstrap-daterangepicker-container"
-  style="display:inline-block"
-></div>
-```
-
-The 2 props you can pass to modify this behavior are:
-
-- **containerStyles [object]**: the styles of the container `<div />` (default: `{ display: 'inline-block' }`)
-- **containerClass [string]**: the class of the container `<div />` (default: `'react-bootstrap-daterangepicker-container'`)
 
 ## Release Notes
 

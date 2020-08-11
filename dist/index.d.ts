@@ -6,10 +6,10 @@ export interface EventHandler {
     (event: JQuery.Event, picker: daterangepicker): any;
 }
 export interface CallbackHandler {
-    (start?: any, end?: any, label?: any): any;
+    (start?: daterangepicker.DateOrString, end?: daterangepicker.DateOrString, label?: string): any;
 }
-export interface Props extends daterangepicker.Options {
-    initialSettings?: any;
+export interface Props {
+    initialSettings?: daterangepicker.Options;
     onApply?: EventHandler;
     onCancel?: EventHandler;
     onHide?: EventHandler;

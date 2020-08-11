@@ -193,7 +193,13 @@ storiesOf('DateRangePicker', module)
           <input type="text" className="form-control col-4" />
         </DateRangePicker>
         <br />
-        <button onClick={changeStartDate}>set startDate to 1 week ago</button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={changeStartDate}
+        >
+          set startDate to 1 week ago
+        </button>
       </div>
     );
   })
@@ -270,7 +276,13 @@ storiesOf('DateRangePicker', module)
           <h4>
             ranges: <small>{JSON.stringify(ranges)}</small>
           </h4>
-          <button onClick={handleChangeRanges}>{changeButtonLabel}</button>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={handleChangeRanges}
+          >
+            {changeButtonLabel}
+          </button>
         </div>
       );
     };

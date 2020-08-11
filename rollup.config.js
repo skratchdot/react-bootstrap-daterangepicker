@@ -1,24 +1,27 @@
-import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve';
+import pkg from './package.json';
+import typescript from 'rollup-plugin-typescript2';
 
 export default {
-  input: 'src/index.js',
-  output: {
-    file: 'dist/bundle.js',
-    format: 'cjs',
-    exports: 'named',
-  },
+  input: 'src/index.tsx',
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
+    },
+    {
+      file: pkg.module,
+      format: 'es',
+      exports: 'named',
+      sourcemap: true,
+    },
+  ],
   plugins: [
-    resolve(),
-    babel({
-      exclude: 'node_modules/**',
+    typescript({
+      rollupCommonJSResolveHack: false,
+      clean: true,
     }),
   ],
-  external: [
-    'bootstrap-daterangepicker',
-    'moment',
-    'jquery',
-    'react',
-    'prop-types',
-  ],
+  external: ['bootstrap-daterangepicker', 'moment', 'jquery', 'react'],
 };

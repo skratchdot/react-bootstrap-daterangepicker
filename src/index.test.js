@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import { mount } from 'enzyme';
-import DateRangePicker from './index.js';
+import DateRangePicker from './index';
 import lolex from 'lolex';
 import moment from 'moment';
 import $ from 'jquery';

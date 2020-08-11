@@ -1,8 +1,11 @@
 {
   "name": "react-bootstrap-daterangepicker",
-  "version": "6.0.0",
+  "version": "7.0.0-beta.0",
   "description": "A date/time picker for react (using bootstrap). This is a react port of: https://github.com/dangrossman/bootstrap-daterangepicker",
-  "main": "./dist/bundle.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -12,7 +15,7 @@
     "build:options": "./scripts/build-options.js",
     "build:storybook": "build-storybook -c .storybook -o ./docs",
     "changelog": "github_changelog_generator -u skratchdot -p react-bootstrap-daterangepicker",
-    "clean": "rimraf ./coverage/ ./docs/",
+    "clean": "rimraf ./coverage/ ./docs/ ./dist/",
     "cover": "npm run test -- --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls --verbose || exit 0",
     "format": "prettier --write --single-quote '**/*.{js,md}'",
@@ -37,7 +40,6 @@
     "bootstrap-daterangepicker": "*",
     "jquery": "*",
     "moment": "*",
-    "prop-types": "*",
     "react": "*"
   },
   "devDependencies": {
@@ -46,11 +48,13 @@
     "@babel/plugin-external-helpers": "^7.10.4",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.3.19",
-    "@storybook/addon-info": "^5.3.19",
-    "@storybook/addon-knobs": "^5.3.19",
-    "@storybook/addon-options": "^5.3.19",
-    "@storybook/react": "^5.3.19",
+    "@babel/preset-typescript": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.2",
+    "@storybook/addon-knobs": "^6.0.2",
+    "@storybook/addon-storysource": "^6.0.2",
+    "@storybook/react": "^6.0.2",
+    "@types/daterangepicker": "^3.1.1",
+    "@types/jquery": "^3.5.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.1.0",
@@ -71,7 +75,6 @@
     "moment": "^2.27.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
-    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "regenerator-runtime": "^0.13.5",
@@ -79,6 +82,8 @@
     "rollup": "^2.21.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^3.9.7",
     "wordwrap": "^1.0.0"
   },
   "keywords": [

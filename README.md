@@ -19,12 +19,12 @@ an existing jQuery/bootstrap library (it is not a pure react port):
 ## Getting Started
 
 1.  Install the needed peer dependencies:
-    `npm install --save bootstrap-daterangepicker react jquery moment prop-types`
+    `npm install --save bootstrap-daterangepicker react jquery moment`
 
 2.  Install the module with:
     `npm install --save react-bootstrap-daterangepicker`
 
-3.  Include the bootstrap@3 css and fonts in your project.
+3.  Include the bootstrap@4 css and fonts in your project.
     (aka `import 'bootstrap/dist/css/bootstrap.css';`)
 
 4.  Include the bootstrap-daterangepicker css in your project.

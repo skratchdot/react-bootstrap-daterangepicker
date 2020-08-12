@@ -1,4 +1,3 @@
-'use strict';
 import * as React from 'react';
 import $ from 'jquery';
 import 'bootstrap-daterangepicker';
@@ -31,7 +30,7 @@ export interface Props {
 
 export class DateRangePicker extends React.Component<Props> {
   ref: any;
-  $picker: any;
+  $picker: JQuery | null;
   constructor(props: Props) {
     super(props);
     this.ref = null;
@@ -48,7 +47,7 @@ export class DateRangePicker extends React.Component<Props> {
     ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
       (event) => {
         const lcase = event.toLowerCase();
-        this.$picker.on(
+        this.$picker?.on(
           lcase + '.daterangepicker',
           this.makeEventHandler('on' + event)
         );
@@ -56,13 +55,7 @@ export class DateRangePicker extends React.Component<Props> {
     );
   }
   componentWillUnmount() {
-    if (
-      this.$picker &&
-      this.$picker.data &&
-      this.$picker.data('daterangepicker')
-    ) {
-      this.$picker.data('daterangepicker').remove();
-    }
+    this.$picker?.data('daterangepicker')?.remove();
   }
   handleCallback(...args: any) {
     if (typeof this.props.onCallback === 'function') {
@@ -81,10 +74,10 @@ export class DateRangePicker extends React.Component<Props> {
     };
   }
   setStartDate(dateOrString: daterangepicker.DateOrString) {
-    this.$picker.data('daterangepicker').setStartDate(dateOrString);
+    this.$picker?.data('daterangepicker')?.setStartDate(dateOrString);
   }
   setEndDate(dateOrString: daterangepicker.DateOrString) {
-    this.$picker.data('daterangepicker').setEndDate(dateOrString);
+    this.$picker?.data('daterangepicker')?.setEndDate(dateOrString);
   }
   render() {
     const childElement: any = React.Children.only(this.props.children);

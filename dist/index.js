@@ -52,16 +52,14 @@ var DateRangePicker = /** @class */ (function (_super) {
         this.$picker.daterangepicker(this.props.initialSettings, this.handleCallback.bind(this));
         // attach event listeners
         ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
+            var _a;
             var lcase = event.toLowerCase();
-            _this.$picker.on(lcase + '.daterangepicker', _this.makeEventHandler('on' + event));
+            (_a = _this.$picker) === null || _a === void 0 ? void 0 : _a.on(lcase + '.daterangepicker', _this.makeEventHandler('on' + event));
         });
     };
     DateRangePicker.prototype.componentWillUnmount = function () {
-        if (this.$picker &&
-            this.$picker.data &&
-            this.$picker.data('daterangepicker')) {
-            this.$picker.data('daterangepicker').remove();
-        }
+        var _a, _b;
+        (_b = (_a = this.$picker) === null || _a === void 0 ? void 0 : _a.data('daterangepicker')) === null || _b === void 0 ? void 0 : _b.remove();
     };
     DateRangePicker.prototype.handleCallback = function () {
         var _a;
@@ -86,10 +84,12 @@ var DateRangePicker = /** @class */ (function (_super) {
         };
     };
     DateRangePicker.prototype.setStartDate = function (dateOrString) {
-        this.$picker.data('daterangepicker').setStartDate(dateOrString);
+        var _a, _b;
+        (_b = (_a = this.$picker) === null || _a === void 0 ? void 0 : _a.data('daterangepicker')) === null || _b === void 0 ? void 0 : _b.setStartDate(dateOrString);
     };
     DateRangePicker.prototype.setEndDate = function (dateOrString) {
-        this.$picker.data('daterangepicker').setEndDate(dateOrString);
+        var _a, _b;
+        (_b = (_a = this.$picker) === null || _a === void 0 ? void 0 : _a.data('daterangepicker')) === null || _b === void 0 ? void 0 : _b.setEndDate(dateOrString);
     };
     DateRangePicker.prototype.render = function () {
         var _this = this;

@@ -21,7 +21,7 @@ export interface Props {
 }
 export declare class DateRangePicker extends React.Component<Props> {
     ref: any;
-    $picker: any;
+    $picker: JQuery | null;
     constructor(props: Props);
     componentDidMount(): void;
     componentWillUnmount(): void;

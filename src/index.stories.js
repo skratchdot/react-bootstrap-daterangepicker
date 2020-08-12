@@ -204,7 +204,7 @@ storiesOf('DateRangePicker', module)
     );
   })
   .add('use onCallback to display start/end dates', () => {
-    const [state, setState] = useState({});
+    const [state, setState] = useState();
     const handleCallback = (start, end) => {
       setState({ start, end });
     };
@@ -214,7 +214,12 @@ storiesOf('DateRangePicker', module)
           <input type="text" className="form-control col-4" />
         </DateRangePicker>
         <br />
-        <pre>state: {JSON.stringify(state)}</pre>
+        <h4>
+          startDate: <small>{state?.start?.format('MM/DD/YYYY (dddd)')}</small>
+        </h4>
+        <h4>
+          endDate: <small>{state?.end?.format('MM/DD/YYYY (dddd)')}</small>
+        </h4>
       </>
     );
   })

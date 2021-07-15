@@ -84,7 +84,7 @@ You MUST pass a single child element to the `<DateRangePicker />` component- and
 Passing custom react components is not currently supported b/c this lib needs a single dom node to initialize.
 
 NOTE: This component should be used as an [Uncontrolled Component](https://reactjs.org/docs/uncontrolled-components.html). If you try
-to control the value of your child `<input />`, the you will probably encounter issues.
+to control the value of your child `<input />`, then you will probably encounter issues.
 
 There are 2 methods from the upstream lib that can be called: `setStartDate` and `setEndDate`, but you need to use refs when doing so.
 Please view the storybook for an example of this.

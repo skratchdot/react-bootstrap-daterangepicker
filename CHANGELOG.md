@@ -1,5 +1,31 @@
 # Changelog
 
+## [Unreleased](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/HEAD)
+
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/7.0.0...HEAD)
+
+**Closed issues:**
+
+- Get name of predefined range as a prop [\#236](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/236)
+- I'm trying to use the showCustomRangeLabel option as true but it has no effect [\#234](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/234)
+- How to set max date [\#233](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/233)
+- Date range picker input box doesn't show up calendar icon ? [\#229](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/229)
+- How to pass maxspan of 31 days for allowing max range of 31 days between start and end dates? [\#227](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/227)
+- How do i allow apply on only selecting start date? [\#226](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/226)
+- TS definitions broken since the `initialSettings` change. [\#224](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/224)
+
+**Merged pull requests:**
+
+- updating dependencies [\#237](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/237) ([skratchdot](https://github.com/skratchdot))
+
+## [7.0.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/7.0.0) (2020-08-12)
+
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/7.0.0-beta.1...7.0.0)
+
+## [7.0.0-beta.1](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/7.0.0-beta.1) (2020-08-11)
+
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/7.0.0-beta.0...7.0.0-beta.1)
+
 ## [7.0.0-beta.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/7.0.0-beta.0) (2020-08-11)
 
 [Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/6.0.0...7.0.0-beta.0)
@@ -29,7 +55,7 @@
 - Can you please update react-bootstrap-daterangepicker to react 16 , we are in dire need of it, thanks a mil [\#186](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/186)
 - How do I manually enter a date using the daterangepicker@3.0.3? [\#185](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/185)
 - endDate dose not work. [\#184](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/184)
-- this.\$picker.daterangepicker is not a function error while running Jest test cases [\#183](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/183)
+- this.$picker.daterangepicker is not a function error while running Jest test cases [\#183](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/183)
 - Problem with using in window.open [\#182](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/182)
 - TypeError: Cannot read property 'any' of undefined [\#181](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/181)
 - Selected range always showing 'Custom' when 'timePickerSeconds' is true [\#180](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/180)
@@ -78,7 +104,7 @@
 - Uncaught Invariant Violation: addComponentAsRefTo\(...\): [\#69](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/69)
 - error when pass props parentEl to string "\#some-div-id" [\#67](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/67)
 - Error when you pass null-s to startDate and EndDate [\#65](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/65)
-- Add global.jQuery = \$ to index.js [\#60](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/60)
+- Add global.jQuery = $ to index.js [\#60](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/60)
 - Missing documentation for "timeZone" parameter [\#59](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/59)
 - Global MomentJS locale setting is ignored [\#57](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/57)
 - partial param in locale case error [\#53](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/53)
@@ -307,7 +333,6 @@
 - fix \#64, support jquery2 [\#66](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/66) ([luqin](https://github.com/luqin))
 - Add an option\("alwaysShowCalendars"\) - Update get-options.js [\#63](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/63) ([carlsagan21](https://github.com/carlsagan21))
 - remount daterangepicker on rerender [\#56](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/56) ([spinloop](https://github.com/spinloop))
-- getOptionsFromProps should never return undefined [\#23](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/23) ([justinsisley](https://github.com/justinsisley))
 
 ## [1.0.6](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/1.0.6) (2015-11-23)
 
@@ -418,6 +443,7 @@
 **Merged pull requests:**
 
 - Remove console.log statement in componentDidMount [\#24](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/24) ([justinsisley](https://github.com/justinsisley))
+- getOptionsFromProps should never return undefined [\#23](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/23) ([justinsisley](https://github.com/justinsisley))
 
 ## [0.2.7](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.2.7) (2015-07-19)
 
@@ -437,6 +463,10 @@
 - Upgrade bootstrap-daterangepicker to 1.3.22 [\#19](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/19)
 - How to enable the scroll bar in a modal? [\#18](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/18)
 - jQuery? [\#12](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/12)
+
+**Merged pull requests:**
+
+- Use jquery 1.11.3 compatible ie8 [\#16](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/16) ([codeos](https://github.com/codeos))
 
 ## [0.2.5](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.2.5) (2015-04-08)
 
@@ -505,7 +535,6 @@
 
 **Merged pull requests:**
 
-- Use jquery 1.11.3 compatible ie8 [\#16](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/16) ([codeos](https://github.com/codeos))
 - Fix main entry point in package.json [\#3](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/3) ([sbellity](https://github.com/sbellity))
 
 ## [0.0.7](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/0.0.7) (2014-10-28)

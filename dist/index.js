@@ -2,11 +2,34 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
 var React = require('react');
-var $ = _interopDefault(require('jquery'));
+var $ = require('jquery');
 require('bootstrap-daterangepicker');
+
+function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+function _interopNamespace(e) {
+    if (e && e.__esModule) return e;
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () {
+                        return e[k];
+                    }
+                });
+            }
+        });
+    }
+    n['default'] = e;
+    return Object.freeze(n);
+}
+
+var React__namespace = /*#__PURE__*/_interopNamespace(React);
+var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -32,6 +55,8 @@ var extendStatics = function(d, b) {
 };
 
 function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -48,7 +73,7 @@ var DateRangePicker = /** @class */ (function (_super) {
     DateRangePicker.prototype.componentDidMount = function () {
         var _this = this;
         // initialize daterangepicker
-        this.$picker = $(this.ref);
+        this.$picker = $__default['default'](this.ref);
         this.$picker.daterangepicker(this.props.initialSettings, this.handleCallback.bind(this));
         // attach event listeners
         ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
@@ -93,13 +118,13 @@ var DateRangePicker = /** @class */ (function (_super) {
     };
     DateRangePicker.prototype.render = function () {
         var _this = this;
-        var childElement = React.Children.only(this.props.children);
-        return React.cloneElement(childElement, {
+        var childElement = React__namespace.Children.only(this.props.children);
+        return React__namespace.cloneElement(childElement, {
             ref: function (el) { return (_this.ref = el); },
         });
     };
     return DateRangePicker;
-}(React.Component));
+}(React__namespace.Component));
 
 exports.DateRangePicker = DateRangePicker;
 exports.default = DateRangePicker;

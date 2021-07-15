@@ -1,4 +1,4 @@
-import { Children, cloneElement, Component } from 'react';
+import * as React from 'react';
 import $ from 'jquery';
 import 'bootstrap-daterangepicker';
 
@@ -26,6 +26,8 @@ var extendStatics = function(d, b) {
 };
 
 function __extends(d, b) {
+    if (typeof b !== "function" && b !== null)
+        throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -87,13 +89,13 @@ var DateRangePicker = /** @class */ (function (_super) {
     };
     DateRangePicker.prototype.render = function () {
         var _this = this;
-        var childElement = Children.only(this.props.children);
-        return cloneElement(childElement, {
+        var childElement = React.Children.only(this.props.children);
+        return React.cloneElement(childElement, {
             ref: function (el) { return (_this.ref = el); },
         });
     };
     return DateRangePicker;
-}(Component));
+}(React.Component));
 
 export default DateRangePicker;
 export { DateRangePicker };

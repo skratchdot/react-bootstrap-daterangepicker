@@ -5,5 +5,6 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less)$': 'identity-obj-proxy',
   },
-  setupTestFrameworkScriptFile: '<rootDir>src/__testutil__/setup.js',
+  setupFilesAfterEnv: ['<rootDir>src/__testutil__/setup.js'],
+  testEnvironment: 'jsdom',
 };

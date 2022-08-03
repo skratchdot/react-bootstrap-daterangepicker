@@ -91,11 +91,11 @@ test('picker with all event handlers', async () => {
   wrapper.instance().$picker.click();
   expect(onShow).toHaveBeenCalledTimes(1);
   expect(onHide).toHaveBeenCalledTimes(0);
-  expect(onShowCalendar).toHaveBeenCalledTimes(0);
+  expect(onShowCalendar).toHaveBeenCalledTimes(1);
   expect(onHideCalendar).toHaveBeenCalledTimes(0);
   expect(onApply).toHaveBeenCalledTimes(0);
   expect(onCancel).toHaveBeenCalledTimes(0);
-  expect(onEvent).toHaveBeenCalledTimes(1);
+  expect(onEvent).toHaveBeenCalledTimes(2);
   expect(onCallback).toHaveBeenCalledTimes(0);
 
   // click 2 dates
@@ -106,22 +106,22 @@ test('picker with all event handlers', async () => {
   $(document.body).find('.cancelBtn').click();
   expect(onShow).toHaveBeenCalledTimes(1);
   expect(onHide).toHaveBeenCalledTimes(1);
-  expect(onShowCalendar).toHaveBeenCalledTimes(0);
+  expect(onShowCalendar).toHaveBeenCalledTimes(2);
   expect(onHideCalendar).toHaveBeenCalledTimes(0);
   expect(onApply).toHaveBeenCalledTimes(0);
   expect(onCancel).toHaveBeenCalledTimes(1);
-  expect(onEvent).toHaveBeenCalledTimes(3);
+  expect(onEvent).toHaveBeenCalledTimes(5);
   expect(onCallback).toHaveBeenCalledTimes(0);
 
   // open picker again
   wrapper.instance().$picker.click();
   expect(onShow).toHaveBeenCalledTimes(2);
   expect(onHide).toHaveBeenCalledTimes(1);
-  expect(onShowCalendar).toHaveBeenCalledTimes(0);
+  expect(onShowCalendar).toHaveBeenCalledTimes(3);
   expect(onHideCalendar).toHaveBeenCalledTimes(0);
   expect(onApply).toHaveBeenCalledTimes(0);
   expect(onCancel).toHaveBeenCalledTimes(1);
-  expect(onEvent).toHaveBeenCalledTimes(4);
+  expect(onEvent).toHaveBeenCalledTimes(7);
   expect(onCallback).toHaveBeenCalledTimes(0);
   const d1 = '2018-01-15T05:00:00.000Z';
   const d2 = '2018-01-16T04:59:59.999Z';
@@ -138,11 +138,11 @@ test('picker with all event handlers', async () => {
   $(document.body).find('.applyBtn').click();
   expect(onShow).toHaveBeenCalledTimes(2);
   expect(onHide).toHaveBeenCalledTimes(2);
-  expect(onShowCalendar).toHaveBeenCalledTimes(0);
+  expect(onShowCalendar).toHaveBeenCalledTimes(4);
   expect(onHideCalendar).toHaveBeenCalledTimes(0);
   expect(onApply).toHaveBeenCalledTimes(1);
   expect(onCancel).toHaveBeenCalledTimes(1);
-  expect(onEvent).toHaveBeenCalledTimes(6);
+  expect(onEvent).toHaveBeenCalledTimes(10);
   expect(onCallback).toHaveBeenCalledTimes(1);
   const d3 = '2018-01-17T05:00:00.000Z';
   const d4 = '2018-02-15T04:59:59.999Z';

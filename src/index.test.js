@@ -157,10 +157,7 @@ test.skip('change startDate after opening', async () => {
   expect($('td.active').length).toEqual(0);
   const myRef = React.createRef();
   const wrapper = mount(
-    <DateRangePicker
-      ref={myRef}
-      initialSettings={{ startDate, singleDatePicker: true }}
-    >
+    <DateRangePicker ref={myRef} initialSettings={{ startDate, singleDatePicker: true }}>
       <button>click me</button>
     </DateRangePicker>
   );

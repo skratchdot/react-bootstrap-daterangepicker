@@ -5,11 +5,7 @@ module.exports = {
     jest: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',

@@ -72,7 +72,7 @@ storiesOf('DateRangePicker', module)
           minYear: 1901,
           maxYear: parseInt(moment().format('YYYY'), 10),
         }}
-        onCallback={(start) => {
+        onCallback={start => {
           const years = moment().diff(start, 'years');
           alert('You are ' + years + ' years old!');
         }}
@@ -106,8 +106,7 @@ storiesOf('DateRangePicker', module)
     const handleCallback = (start, end) => {
       setState({ start, end });
     };
-    const label =
-      start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY');
+    const label = start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY');
     return (
       <DateRangePicker
         initialSettings={{
@@ -115,22 +114,10 @@ storiesOf('DateRangePicker', module)
           endDate: end.toDate(),
           ranges: {
             Today: [moment().toDate(), moment().toDate()],
-            Yesterday: [
-              moment().subtract(1, 'days').toDate(),
-              moment().subtract(1, 'days').toDate(),
-            ],
-            'Last 7 Days': [
-              moment().subtract(6, 'days').toDate(),
-              moment().toDate(),
-            ],
-            'Last 30 Days': [
-              moment().subtract(29, 'days').toDate(),
-              moment().toDate(),
-            ],
-            'This Month': [
-              moment().startOf('month').toDate(),
-              moment().endOf('month').toDate(),
-            ],
+            Yesterday: [moment().subtract(1, 'days').toDate(), moment().subtract(1, 'days').toDate()],
+            'Last 7 Days': [moment().subtract(6, 'days').toDate(), moment().toDate()],
+            'Last 30 Days': [moment().subtract(29, 'days').toDate(), moment().toDate()],
+            'This Month': [moment().startOf('month').toDate(), moment().endOf('month').toDate()],
             'Last Month': [
               moment().subtract(1, 'month').startOf('month').toDate(),
               moment().subtract(1, 'month').endOf('month').toDate(),
@@ -158,11 +145,7 @@ storiesOf('DateRangePicker', module)
   })
   .add('input initially empty', () => {
     const handleApply = (event, picker) => {
-      picker.element.val(
-        picker.startDate.format('MM/DD/YYYY') +
-          ' - ' +
-          picker.endDate.format('MM/DD/YYYY')
-      );
+      picker.element.val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
     };
     const handleCancel = (event, picker) => {
       picker.element.val('');
@@ -193,11 +176,7 @@ storiesOf('DateRangePicker', module)
           <input type="text" className="form-control col-4" />
         </DateRangePicker>
         <br />
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={changeStartDate}
-        >
+        <button type="button" className="btn btn-primary" onClick={changeStartDate}>
           set startDate to 1 week ago
         </button>
       </div>
@@ -225,20 +204,14 @@ storiesOf('DateRangePicker', module)
   })
   .add('change initialSettings (range data)', () => {
     const StoryComp = () => {
-      const changeButtonLabel = text(
-        'change button label',
-        'change range label'
-      );
+      const changeButtonLabel = text('change button label', 'change range label');
       const keyRef = useRef(Date.now());
       const [dates, setDates] = useState({
         startDate: moment('2020/03/01'),
         endDate: moment('2020/03/15'),
       });
       const [ranges, setRanges] = useState({
-        ['First Range']: [
-          moment().subtract(2, 'days'),
-          moment().add(2, 'days'),
-        ],
+        ['First Range']: [moment().subtract(2, 'days'), moment().add(2, 'days')],
       });
       const handleApply = (event, picker) => {
         setDates({
@@ -281,11 +254,7 @@ storiesOf('DateRangePicker', module)
           <h4>
             ranges: <small>{JSON.stringify(ranges)}</small>
           </h4>
-          <button
-            type="button"
-            className="btn btn-primary"
-            onClick={handleChangeRanges}
-          >
+          <button type="button" className="btn btn-primary" onClick={handleChangeRanges}>
             {changeButtonLabel}
           </button>
         </div>

@@ -4,9 +4,7 @@ const fs = require('fs');
 const wrap = require('wordwrap')(2, 80);
 
 const buildOptions = () => {
-  const body = fs.readFileSync(
-    `${__dirname}/../node_modules/bootstrap-daterangepicker/website/index.html`
-  );
+  const body = fs.readFileSync(`${__dirname}/../node_modules/bootstrap-daterangepicker/website/index.html`);
   const $ = cheerio.load(body);
   let options = $('#options')
     .parent()
@@ -44,8 +42,7 @@ const buildOptions = () => {
     return option.replace(/</gi, '&lt;').replace(/>/gi, '&gt;');
   });
   // update README.md
-  const before =
-    'You can pass all the settings from the original plugin to the `initialSettings` prop:';
+  const before = 'You can pass all the settings from the original plugin to the `initialSettings` prop:';
   const after = 'You can listen to the following 8 events:';
   const readme = fs.readFileSync('./README.md').toString();
   const newReadme =
@@ -58,18 +55,15 @@ const buildOptions = () => {
   return options;
 };
 
-const printMissingOptions = (includedOptions) => {
+const printMissingOptions = includedOptions => {
   const dateRangeOptions = fs
-    .readFileSync(
-      `${__dirname}/../node_modules/bootstrap-daterangepicker/daterangepicker.js`,
-      'utf-8'
-    )
+    .readFileSync(`${__dirname}/../node_modules/bootstrap-daterangepicker/daterangepicker.js`, 'utf-8')
     .toString()
     .split(' ')
-    .filter((item) => {
+    .filter(item => {
       return item.indexOf('options.') === 0;
     })
-    .map((item) => {
+    .map(item => {
       return item
         .split('.')[1]
         .split('[')[0]
@@ -80,7 +74,7 @@ const printMissingOptions = (includedOptions) => {
       return dateRangeOptions.indexOf(item) === index;
     })
     .sort()
-    .filter((item) => {
+    .filter(item => {
       return includedOptions.indexOf(item) === -1;
     });
   // eslint-disable-next-line

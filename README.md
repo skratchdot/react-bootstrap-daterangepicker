@@ -4,10 +4,14 @@
 [![Build Status](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker.svg?branch=master)](https://travis-ci.org/skratchdot/react-bootstrap-daterangepicker)
 [![Code Climate](https://codeclimate.com/github/skratchdot/react-bootstrap-daterangepicker.png)](https://codeclimate.com/github/skratchdot/react-bootstrap-daterangepicker)
 [![Coverage Status](https://coveralls.io/repos/skratchdot/react-bootstrap-daterangepicker/badge.svg?branch=master&service=github)](https://coveralls.io/github/skratchdot/react-bootstrap-daterangepicker?branch=master)
-[![Dependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker)
-[![devDependency Status](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker/dev-status.svg)](https://david-dm.org/skratchdot/react-bootstrap-daterangepicker#info=devDependencies)
 
 [![NPM](https://nodei.co/npm/react-bootstrap-daterangepicker.png)](https://npmjs.org/package/react-bootstrap-daterangepicker)
+
+# 🚨 Deprecation Notice 🚨
+
+> I put this project on github because I used it briefly for a project back in 2014. I haven't used it for years, and have recommended
+> looking for a "pure react" date picker library. I might continue to merge small PRs, but will not be giving this library much/any
+> support. I recommend using one of the [other react date picker](#other-react-date-pickers) libraries listed below.
 
 ## Description
 

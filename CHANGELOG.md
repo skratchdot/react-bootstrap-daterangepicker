@@ -1,11 +1,15 @@
 # Changelog
 
-## [Unreleased](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/HEAD)
+## [8.0.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/8.0.0) (2022-08-24)
 
-[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/7.0.0...HEAD)
+[Full Changelog](https://github.com/skratchdot/react-bootstrap-daterangepicker/compare/7.0.0...8.0.0)
 
 **Closed issues:**
 
+- Change default active class [\#246](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/246)
+- singleDatePicker Attribute Not Working [\#240](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/240)
+- parentEl in initialSettings - How to use [\#239](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/239)
+- How to prevent user from not selecting date more than a week [\#238](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/238)
 - Get name of predefined range as a prop [\#236](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/236)
 - I'm trying to use the showCustomRangeLabel option as true but it has no effect [\#234](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/234)
 - How to set max date [\#233](https://github.com/skratchdot/react-bootstrap-daterangepicker/issues/233)
@@ -16,6 +20,7 @@
 
 **Merged pull requests:**
 
+- react 18 fixes [\#257](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/257) ([danhab99](https://github.com/danhab99))
 - updating dependencies [\#237](https://github.com/skratchdot/react-bootstrap-daterangepicker/pull/237) ([skratchdot](https://github.com/skratchdot))
 
 ## [7.0.0](https://github.com/skratchdot/react-bootstrap-daterangepicker/tree/7.0.0) (2020-08-12)

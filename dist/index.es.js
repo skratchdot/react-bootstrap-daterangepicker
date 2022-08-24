@@ -49,7 +49,7 @@ var DateRangePicker = /** @class */ (function (_super) {
         // attach event listeners
         ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
             var _a;
-            var lcase = event.toLowerCase();
+            var lcase = event.charAt(0).toLowerCase() + event.slice(1);
             (_a = _this.$picker) === null || _a === void 0 ? void 0 : _a.on(lcase + '.daterangepicker', _this.makeEventHandler('on' + event));
         });
     };

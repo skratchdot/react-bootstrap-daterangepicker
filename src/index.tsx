@@ -48,7 +48,7 @@ export class DateRangePicker extends React.Component<
     // attach event listeners
     ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(
       (event) => {
-        const lcase = event.toLowerCase();
+        const lcase = event.charAt(0).toLowerCase() + event.slice(1);
         this.$picker?.on(
           lcase + '.daterangepicker',
           this.makeEventHandler('on' + event)

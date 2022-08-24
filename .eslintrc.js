@@ -9,6 +9,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
   ],
   parser: 'babel-eslint',
   parserOptions: {

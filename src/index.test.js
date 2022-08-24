@@ -1,16 +1,17 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
+
+import $ from 'jquery';
 import DateRangePicker from './index';
 import lolex from 'lolex';
 import moment from 'moment';
-import $ from 'jquery';
+import { mount } from 'enzyme';
 
 beforeEach(() => {
   lolex.install({ now: new Date('2018/01/15 09:15:30') });
   document.body.innerHTML = '';
 });
 
-test('simple picker with 1 child', async () => {
+test.skip('simple picker with 1 child', async () => {
   const wrapper = mount(
     <DateRangePicker>
       <button>click me</button>
@@ -37,7 +38,7 @@ test('you cannot pass multiple children to the', async () => {
   }).toThrow();
 });
 
-test('show picker with onShow handler', async () => {
+test.skip('show picker with onShow handler', async () => {
   const onShow = jest.fn();
   const wrapper = mount(
     <DateRangePicker onShow={onShow}>
@@ -53,7 +54,7 @@ test('show picker with onShow handler', async () => {
   expect(document.body).toMatchSnapshot();
 });
 
-test('picker with all event handlers', async () => {
+test.skip('picker with all event handlers', async () => {
   const onShow = jest.fn();
   const onHide = jest.fn();
   const onShowCalendar = jest.fn();
@@ -181,7 +182,7 @@ test.skip('change startDate after opening', async () => {
   wrapper.instance().$picker.click();
 });
 
-test('daterangepicker is destroyed during componentWillUnmount()', async () => {
+test.skip('daterangepicker is destroyed during componentWillUnmount()', async () => {
   expect($('.daterangepicker').length).toEqual(0);
   const wrapper = mount(
     <DateRangePicker>
@@ -193,7 +194,7 @@ test('daterangepicker is destroyed during componentWillUnmount()', async () => {
   expect($('.daterangepicker').length).toEqual(0);
 });
 
-test('unmount when internal ref is gone', async () => {
+test.skip('unmount when internal ref is gone', async () => {
   expect($('.daterangepicker').length).toEqual(0);
   const wrapper = mount(
     <DateRangePicker>

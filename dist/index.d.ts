@@ -1,5 +1,6 @@
 /// <reference types="jquery" />
 /// <reference types="daterangepicker" />
+/// <reference types="jquery" />
 import * as React from 'react';
 import 'bootstrap-daterangepicker';
 export interface EventHandler {

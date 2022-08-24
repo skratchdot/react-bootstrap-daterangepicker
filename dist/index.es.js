@@ -2,7 +2,7 @@ import * as React from 'react';
 import $ from 'jquery';
 import 'bootstrap-daterangepicker';
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -91,12 +91,11 @@ var DateRangePicker = /** @class */ (function (_super) {
         var _this = this;
         var childElement = React.Children.only(this.props.children);
         return React.cloneElement(childElement, {
-            ref: function (el) { return (_this.ref = el); },
+            ref: function (el) { return (_this.ref = el); }
         });
     };
     return DateRangePicker;
 }(React.Component));
 
-export default DateRangePicker;
-export { DateRangePicker };
+export { DateRangePicker, DateRangePicker as default };
 //# sourceMappingURL=index.es.js.map

@@ -17,21 +17,19 @@ function _interopNamespace(e) {
                 var d = Object.getOwnPropertyDescriptor(e, k);
                 Object.defineProperty(n, k, d.get ? d : {
                     enumerable: true,
-                    get: function () {
-                        return e[k];
-                    }
+                    get: function () { return e[k]; }
                 });
             }
         });
     }
-    n['default'] = e;
+    n["default"] = e;
     return Object.freeze(n);
 }
 
 var React__namespace = /*#__PURE__*/_interopNamespace(React);
 var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -73,7 +71,7 @@ var DateRangePicker = /** @class */ (function (_super) {
     DateRangePicker.prototype.componentDidMount = function () {
         var _this = this;
         // initialize daterangepicker
-        this.$picker = $__default['default'](this.ref);
+        this.$picker = $__default["default"](this.ref);
         this.$picker.daterangepicker(this.props.initialSettings, this.handleCallback.bind(this));
         // attach event listeners
         ['Show', 'Hide', 'ShowCalendar', 'HideCalendar', 'Apply', 'Cancel'].forEach(function (event) {
@@ -120,12 +118,12 @@ var DateRangePicker = /** @class */ (function (_super) {
         var _this = this;
         var childElement = React__namespace.Children.only(this.props.children);
         return React__namespace.cloneElement(childElement, {
-            ref: function (el) { return (_this.ref = el); },
+            ref: function (el) { return (_this.ref = el); }
         });
     };
     return DateRangePicker;
 }(React__namespace.Component));
 
 exports.DateRangePicker = DateRangePicker;
-exports.default = DateRangePicker;
+exports["default"] = DateRangePicker;
 //# sourceMappingURL=index.js.map

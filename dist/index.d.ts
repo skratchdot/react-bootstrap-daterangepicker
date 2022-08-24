@@ -19,7 +19,7 @@ export interface Props {
     onEvent?: EventHandler;
     onCallback?: CallbackHandler;
 }
-export declare class DateRangePicker extends React.Component<Props> {
+export declare class DateRangePicker extends React.Component<React.PropsWithChildren<Props>> {
     ref: any;
     $picker: JQuery | null;
     constructor(props: Props);
